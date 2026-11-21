@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SCIENCE MAGAZINE 02 | 비결정성 고체의 활용과 차세대 안경</title>
+<style>
+:root{--ink:#17202b;--muted:#647184;--paper:#f4f6f8;--card:#fff;--line:#dce2e8;--blue:#286b91;--blue2:#dceef7;--orange:#e36b3d;--orange2:#fff0e8;--green:#367b68}
+*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font-family:system-ui,-apple-system,"Noto Sans KR",sans-serif;line-height:1.72}
+header{background:linear-gradient(135deg,#102c40,#245d78 65%,#d36c3d);color:white;padding:48px 22px 42px}
+.wrap{max-width:980px;margin:auto}.eyebrow{font-size:.78rem;letter-spacing:.16em;font-weight:800;opacity:.85}
+h1{font-size:clamp(2.2rem,6vw,4.5rem);line-height:1.08;margin:15px 0}.subtitle{font-size:1.12rem;max-width:700px;color:#e7f1f6}
+.meta{display:flex;gap:10px;flex-wrap:wrap;margin-top:24px}.pill{border:1px solid #ffffff70;border-radius:999px;padding:5px 12px;font-size:.8rem}
+main{max-width:980px;margin:30px auto;padding:0 18px}.lead{font-size:1.13rem;color:#344252;margin:0 0 28px}
+section{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:clamp(20px,4vw,34px);margin:20px 0;box-shadow:0 8px 28px #1b31400a}
+.kicker{color:var(--blue);font-size:.78rem;font-weight:850;letter-spacing:.12em}
+h2{font-size:1.65rem;margin:5px 0 14px;line-height:1.3}h3{font-size:1.12rem;margin:15px 0 7px}
+p{margin:9px 0}.muted{color:var(--muted);font-size:.9rem}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.panel{background:#f6f8fa;border:1px solid var(--line);border-radius:14px;padding:18px}
+.callout{border-left:4px solid var(--orange);background:var(--orange2);padding:14px 17px;border-radius:0 12px 12px 0;margin:16px 0}
+.bluebox{background:var(--blue2);border-radius:14px;padding:16px}
+svg{max-width:100%;height:auto;display:block;margin:auto}
+.controls{display:flex;gap:8px;flex-wrap:wrap;margin:12px 0}
+button{border:1px solid #b9c7d1;background:white;border-radius:999px;padding:9px 15px;font-weight:700;color:#233747;cursor:pointer}
+button.active,button:hover{background:var(--blue);color:white;border-color:var(--blue)}
+.range{width:100%;accent-color:var(--orange)}
+.result{font-weight:800;color:var(--orange);font-size:1.2rem}
+table{width:100%;border-collapse:collapse;margin:12px 0;font-size:.93rem}th,td{border-bottom:1px solid var(--line);padding:10px;text-align:left;vertical-align:top}th{background:#f3f6f8}
+ol,ul{padding-left:22px}.tag{display:inline-block;background:#e9f2f7;color:#245c78;padding:3px 9px;border-radius:999px;font-size:.78rem;font-weight:800}
+footer{max-width:980px;margin:25px auto 60px;padding:0 18px;color:var(--muted);font-size:.85rem}
+a{color:#1d668e;overflow-wrap:anywhere}
+@media(max-width:650px){.grid{grid-template-columns:1fr}header{padding-top:36px}section{padding:20px}table{font-size:.83rem}}
+@media print{body{background:white}header{background:#183d53!important;print-color-adjust:exact}section{break-inside:avoid;box-shadow:none}button{display:none}}
+</style>
+</head>
+<body>
+<header>
+ <div class="wrap">
+  <div class="eyebrow">SCIENCE MAGAZINE · MATERIALS & OPTICS · ISSUE 02</div>
+  <h1>AMORPHOUS<br>SOLIDS, NEW VISION</h1>
+  <div class="subtitle">비결정성 고체의 광학적 활용에서 차세대 안경 설계까지 — 물질의 구조를 기술로 연결하다</div>
+  <div class="meta"><span class="pill">탐구 기사 02</span><span class="pill">광학 소재</span><span class="pill">형상기억합금</span><span class="pill">기술의 타당성 검토</span></div>
+ </div>
+</header>
+<main>
+<p class="lead">비결정성 고체는 단순히 ‘규칙적인 결정 구조가 없는 물질’에 그치지 않는다. 빛을 다루는 광학 소재로 활용될 수 있으며, 다른 기능성 재료와 결합하면 새로운 안경 설계의 가능성도 생각해 볼 수 있다. 그렇다면 실제 연구 사례와 아이디어를 구분해 살펴보자.</p>
+
+<section>
+ <div class="kicker">01 · MATERIAL SCIENCE</div>
+ <h2>비결정성 고체, 광학 소재가 되다</h2>
+ <p>유리와 같은 비결정성 고체는 원자 배열이 장거리 규칙성을 갖지 않지만, 빛이 통과할 수 있도록 조성·균질성·표면 상태를 제어하면 광학 소재로 활용할 수 있다. 중요한 것은 ‘비결정성’이라는 성질 하나만으로 좋은 렌즈가 되는 것이 아니라, 빛의 투과와 굴절을 안정적으로 구현할 수 있는 재료 설계가 함께 필요하다는 점이다.</p>
+ <div class="grid">
+  <div class="panel">
+   <span class="tag">구조적 특징</span>
+   <h3>불규칙한 원자 배열</h3>
+   <svg viewBox="0 0 300 155" role="img" aria-label="비결정성 고체의 불규칙 원자 배열">
+    <rect x="5" y="5" width="290" height="145" rx="12" fill="#eaf2f6"/>
+    <g stroke="#7b9eaf" stroke-width="2">
+     <path d="M40 38L92 25L145 48L207 28L263 53M40 38L58 100L113 82L145 48L171 112L207 28L263 53L245 119M58 100L30 130L113 82L125 135L171 112L220 145L245 119"/>
+    </g>
+    <g fill="#286b91" stroke="white" stroke-width="2">
+     <circle cx="40" cy="38" r="8"/><circle cx="92" cy="25" r="8"/><circle cx="145" cy="48" r="8"/><circle cx="207" cy="28" r="8"/><circle cx="263" cy="53" r="8"/><circle cx="58" cy="100" r="8"/><circle cx="113" cy="82" r="8"/><circle cx="171" cy="112" r="8"/><circle cx="245" cy="119" r="8"/><circle cx="30" cy="130" r="8"/><circle cx="125" cy="135" r="8"/><circle cx="220" cy="145" r="8"/>
+    </g>
+   </svg>
+   <p class="muted">장거리에서 반복되는 규칙적 배열이 없는 구조를 단순화한 그림</p>
+  </div>
+  <div class="panel">
+   <span class="tag">광학적 역할</span>
+   <h3>빛의 투과와 굴절</h3>
+   <svg viewBox="0 0 300 155" role="img" aria-label="렌즈를 통과하는 빛의 굴절">
+    <rect x="5" y="5" width="290" height="145" rx="12" fill="#f4f8fa"/>
+    <path d="M140 20 Q95 77 140 135 Q160 77 140 20Z" fill="#a8d8e8" stroke="#286b91" stroke-width="2"/>
+    <path d="M20 48L130 48L205 78M20 77L130 77L205 78M20 106L130 106L205 78" stroke="#e36b3d" stroke-width="2.5" fill="none"/>
+    <path d="M198 70L207 78L196 83" stroke="#e36b3d" stroke-width="2" fill="none"/>
+    <text x="20" y="25" font-size="11" fill="#526777">입사광</text><text x="211" y="100" font-size="11" fill="#526777">굴절광</text>
+   </svg>
+   <p class="muted">렌즈의 모양과 굴절률에 따라 빛의 진행 방향이 달라진다.</p>
+  </div>
+ </div>
+ <div class="callout"><b>핵심:</b> 비결정성은 원자 배열의 특징이다. 투명성·굴절률·내구성은 물질의 조성과 제조 상태 등에 따라 달라지므로 서로 같은 의미로 취급하면 안 된다.</div>
+</section>
+
+<section>
+ <div class="kicker">02 · RESEARCH CASE</div>
+ <h2>자료 속 실제 사례: 비결정성 탄산칼슘 미세렌즈 배열</h2>
+ <p>자료에서는 탄산칼슘(CaCO₃) 입자들이 모이고 자기조립하는 과정을 통해 미세렌즈 배열을 형성한 연구를 소개한다. 연구에서는 계면활성제가 입자들의 성장과 모양을 조절하는 데 중요한 역할을 했으며, 비교적 균일한 크기와 초점 특성을 갖는 미세렌즈 배열을 구현했다.</p>
+ <div class="bluebox">
+  <b>자기조립(Self-assembly)이란?</b>
+  <p>작은 구성 요소들이 주변 환경과 상호작용하면서 외부에서 모든 위치를 일일이 배치하지 않아도 일정한 구조를 형성하는 현상이다.</p>
+ </div>
+ <svg viewBox="0 0 720 190" role="img" aria-label="미세렌즈 자기조립의 개념도">
+  <rect x="8" y="8" width="704" height="174" rx="16" fill="#f3f7f9"/>
+  <g fill="#86b9cc" stroke="#286b91" stroke-width="2">
+   <circle cx="70" cy="72" r="12"/><circle cx="110" cy="100" r="9"/><circle cx="145" cy="62" r="14"/><circle cx="92" cy="137" r="8"/><circle cx="163" cy="126" r="10"/>
+  </g>
+  <path d="M205 94H285M275 84L287 94L275 104" stroke="#e36b3d" stroke-width="3" fill="none"/>
+  <g fill="#a4cfdd" stroke="#286b91" stroke-width="2">
+   <circle cx="350" cy="72" r="22"/><circle cx="395" cy="72" r="22"/><circle cx="440" cy="72" r="22"/><circle cx="350" cy="117" r="22"/><circle cx="395" cy="117" r="22"/><circle cx="440" cy="117" r="22"/>
+  </g>
+  <path d="M485 94H555M545 84L557 94L545 104" stroke="#e36b3d" stroke-width="3" fill="none"/>
+  <g fill="#7cb2c6" stroke="#286b91" stroke-width="2">
+   <path d="M590 90 Q590 50 625 50 Q660 50 660 90 Q625 110 590 90Z"/>
+   <path d="M590 126 Q590 86 625 86 Q660 86 660 126 Q625 146 590 126Z"/>
+  </g>
+  <g font-size="13" fill="#31495a" text-anchor="middle"><text x="115" y="165">미세 입자</text><text x="395" y="165">배열 형성</text><text x="625" y="165">미세렌즈 구조</text></g>
+ </svg>
+ <p class="muted">위 그림은 연구의 원리를 이해하기 위한 개념도이며 실제 논문 이미지를 복제한 것이 아니다.</p>
+ <h3>이 사례가 중요한 이유</h3>
+ <ul>
+  <li>비결정성 탄산칼슘을 포함한 재료가 광학적 기능을 갖는 미세구조로 구현될 수 있음을 보여 준다.</li>
+  <li>재료의 조성뿐 아니라 입자의 성장과 배열을 조절하는 과정도 기능 구현에 중요하다는 점을 보여 준다.</li>
+  <li>생체모방과 자기조립 원리를 광학 소재 제작에 연결할 가능성을 제시한다.</li>
+ </ul>
+ <div class="callout"><b>비판적으로 읽기:</b> 이 연구의 미세렌즈 배열은 안경의 도수 교정용 렌즈와 동일하지 않다. 미세렌즈의 광학적 기능을 확인한 연구를 곧바로 일반 안경 렌즈의 성능이 입증된 사례로 확대 해석해서는 안 된다.</div>
+</section>
+
+<section>
+ <div class="kicker">03 · OPTICS INTERACTIVE</div>
+ <h2>오목렌즈와 볼록렌즈는 어떻게 다를까?</h2>
+ <p>안경 렌즈는 빛을 굴절시켜 망막에 상이 맺히도록 돕는다. 아래 버튼으로 근시와 원시의 교정 원리를 비교해 보자.</p>
+ <div class="controls">
+  <button class="active" id="myopiaBtn" onclick="setVision('myopia')">근시 · 오목렌즈</button>
+  <button id="hyperopiaBtn" onclick="setVision('hyperopia')">원시 · 볼록렌즈</button>
+ </div>
+ <div class="panel">
+  <svg id="visionSvg" viewBox="0 0 700 230" role="img" aria-label="렌즈에 의한 빛의 굴절 비교">
+   <rect x="8" y="8" width="684" height="214" rx="14" fill="#f7f9fa"/>
+   <path d="M570 30 Q610 115 570 200" stroke="#367b68" stroke-width="8" fill="none"/>
+   <text x="600" y="20" font-size="13" fill="#367b68">망막</text>
+   <path id="ray1" d="M35 60L270 60L570 115" stroke="#e36b3d" stroke-width="3" fill="none"/>
+   <path id="ray2" d="M35 115L270 115L570 115" stroke="#e36b3d" stroke-width="3" fill="none"/>
+   <path id="ray3" d="M35 170L270 170L570 115" stroke="#e36b3d" stroke-width="3" fill="none"/>
+   <path id="lens" d="M270 25 Q310 115 270 205 Q230 115 270 25Z" fill="#a8d8e8" stroke="#286b91" stroke-width="3"/>
+   <text x="270" y="220" font-size="12" text-anchor="middle" fill="#526777">교정 렌즈</text>
+  </svg>
+  <h3 id="visionTitle">근시: 오목렌즈</h3>
+  <p id="visionText">근시는 먼 곳에서 온 빛이 망막보다 앞쪽에 초점을 맺는 상태다. 오목렌즈는 빛을 퍼지게 한 뒤 눈에 들어오도록 하여 초점이 망막에 맺히도록 돕는다.</p>
+ </div>
+ <p class="muted">빛의 경로는 원리를 설명하기 위한 단순화된 모식도이며 실제 눈의 광학계를 정밀하게 재현한 것은 아니다.</p>
+</section>
+
+<section>
+ <div class="kicker">04 · DESIGN PROPOSAL</div>
+ <h2>차세대 안경: 비결정성 광학 소재와 형상기억합금 프레임</h2>
+ <p>앞선 연구에서 얻은 아이디어를 확장해, 광학 기능을 담당하는 렌즈와 기계적 변형을 견디는 프레임을 서로 다른 재료로 설계하는 방안을 생각해 볼 수 있다.</p>
+ <svg viewBox="0 0 720 300" role="img" aria-label="비결정성 광학 렌즈와 형상기억합금 프레임을 결합한 안경 개념도">
+  <rect x="8" y="8" width="704" height="284" rx="18" fill="#f4f7f9"/>
+  <g fill="#a9d9e8" fill-opacity=".65" stroke="#286b91" stroke-width="7">
+   <path d="M85 80 Q85 55 115 55 H275 Q305 55 305 85 V175 Q305 205 275 205 H115 Q85 205 85 175Z"/>
+   <path d="M415 85 Q415 55 445 55 H605 Q635 55 635 85 V175 Q635 205 605 205 H445 Q415 205 415 175Z"/>
+  </g>
+  <g fill="none" stroke="#d16d3f" stroke-width="12" stroke-linecap="round">
+   <path d="M305 112 Q360 75 415 112"/>
+   <path d="M85 110 Q55 95 35 110 L25 145"/>
+   <path d="M635 110 Q665 95 685 110 L695 145"/>
+  </g>
+  <g fill="#28495d" font-size="15" font-weight="700">
+   <text x="195" y="245" text-anchor="middle">광학 렌즈</text>
+   <text x="360" y="45" text-anchor="middle">연결부</text>
+   <text x="525" y="245" text-anchor="middle">광학 렌즈</text>
+   <text x="360" y="278" text-anchor="middle">주황색: 프레임 구조 · 파란색: 렌즈 영역</text>
+  </g>
+ </svg>
+ <div class="grid">
+  <div class="panel">
+   <span class="tag">렌즈 영역</span>
+   <h3>비결정성 광학 소재</h3>
+   <ul><li>빛을 투과하고 굴절시키는 역할</li><li>투명도와 굴절률의 균일성 확보 필요</li><li>긁힘과 충격에 대한 내구성 검증 필요</li></ul>
+  </div>
+  <div class="panel">
+   <span class="tag">프레임 영역</span>
+   <h3>형상기억합금</h3>
+   <ul><li>변형 후 원래 형상으로 회복하는 성질 활용</li><li>초탄성 특성을 이용하면 착용 중 프레임의 변형과 복원에 도움</li><li>반복 변형 후 피로와 연결부 내구성 검증 필요</li></ul>
+  </div>
+ </div>
+ <h3>설계의 핵심 질문</h3>
+ <p>렌즈가 광학적 안정성을 유지하면서 프레임은 외부 힘에 유연하게 대응하도록 만들 수 있을까? 이 설계에서는 렌즈와 프레임에 서로 다른 역할을 부여하는 것이 핵심이다.</p>
+</section>
+
+<section>
+ <div class="kicker">05 · CRITICAL REVIEW</div>
+ <h2>아이디어의 가능성과 한계</h2>
+ <table>
+  <thead><tr><th>검토 요소</th><th>기대 가능성</th><th>검증해야 할 한계</th></tr></thead>
+  <tbody>
+   <tr><td>광학 소재</td><td>비결정성 소재의 투명성과 굴절 특성을 활용</td><td>실제 렌즈 수준의 투과율·굴절률·균일성 확보 여부</td></tr>
+   <tr><td>프레임</td><td>형상기억합금의 복원 특성으로 변형에 대응</td><td>반복 피로, 무게, 연결부 안정성, 온도 조건</td></tr>
+   <tr><td>렌즈-프레임 결합</td><td>각 재료의 장점을 분담하는 구조</td><td>재료 간 결합 안정성과 렌즈에 전달되는 응력</td></tr>
+   <tr><td>온도 반응형 기능</td><td>온도 변화에 반응하는 소재를 설계에 활용할 가능성</td><td>온도만으로 안경 도수가 안정적이고 유용하게 바뀐다는 근거는 부족함</td></tr>
+  </tbody>
+ </table>
+ <div class="callout"><b>중요한 한계:</b> 일반적인 유리는 쉽게 휘어지는 재료가 아니다. 또한 프레임의 형상기억합금이 변형된다고 해서 렌즈의 곡률이나 도수가 자동으로 적절하게 바뀌는 것은 아니다. 렌즈에 힘이 고르게 전달되는지, 광학적 왜곡이 발생하지 않는지 별도로 검증해야 한다.</div>
+ <h3>실현 가능성을 확인하기 위한 탐구 계획</h3>
+ <ol>
+  <li><b>재료 비교:</b> 후보 렌즈 소재의 투명도와 내구성을 비교한다.</li>
+  <li><b>프레임 시험:</b> 형상기억합금 프레임의 반복 변형과 복원 정도를 관찰한다.</li>
+  <li><b>결합 구조 검토:</b> 프레임 변형이 렌즈에 전달되는 정도와 시야 왜곡 가능성을 확인한다.</li>
+  <li><b>온도 조건 비교:</b> 여러 온도 조건에서 재료의 형태와 광학적 성능이 안정적으로 유지되는지 측정한다.</li>
+ </ol>
+</section>
+
+<section>
+ <div class="kicker">06 · CONCLUSION</div>
+ <h2>재료의 특성을 이해하는 것이 기술 설계의 출발점</h2>
+ <p>이번 탐구에서는 비결정성 고체가 광학 소재로 활용될 수 있다는 점을 연구 사례를 통해 살펴보고, 이를 형상기억합금 프레임과 결합한 안경 설계 아이디어로 확장했다. 이 과정에서 한 재료의 장점만으로 완성된 기술을 판단할 수 없으며, 각 재료의 역할과 서로 결합했을 때 발생하는 문제까지 검토해야 한다는 점을 확인했다.</p>
+ <div class="bluebox"><b>최종 탐구 질문</b><p>비결정성 광학 소재와 형상기억합금의 특성을 결합하면, 광학적 안정성과 기계적 유연성을 동시에 갖춘 안경을 설계할 수 있을까?</p></div>
+</section>
+
+<section>
+ <div class="kicker">REFERENCES</div>
+ <h2>자료 및 참고 문헌</h2>
+ <ol>
+  <li>Lee, K. et al. (2012). “Self-assembly of amorphous calcium carbonate microlens arrays.” <i>Nature Communications</i>, 3, 725. DOI: 10.1038/ncomms1720. <a href="https://www.nature.com/articles/ncomms1720" target="_blank" rel="noopener">논문 원문 보기</a></li>
+ </ol>
+ <p class="muted">연구에서 확인된 미세렌즈 배열의 결과와 본 기사에서 제안한 안경 설계 아이디어는 구분하여 해석해야 한다. 안경 설계는 후속 검증이 필요한 개념 제안이다.</p>
+</section>
+</main>
+<footer>SCIENCE MAGAZINE 02 · AMORPHOUS SOLIDS & FUTURE EYEWEAR<br>교육·탐구 목적의 과학 기사. 그림과 상호작용은 개념 이해를 위한 자체 제작 모식도이다.</footer>
+<script>
+function setVision(mode){
+ const myopia=mode==='myopia';
+ document.getElementById('myopiaBtn').classList.toggle('active',myopia);
+ document.getElementById('hyperopiaBtn').classList.toggle('active',!myopia);
+ document.getElementById('visionTitle').textContent=myopia?'근시: 오목렌즈':'원시: 볼록렌즈';
+ document.getElementById('visionText').textContent=myopia
+ ?'근시는 먼 곳에서 온 빛이 망막보다 앞쪽에 초점을 맺는 상태다. 오목렌즈는 빛을 퍼지게 한 뒤 눈에 들어오도록 하여 초점이 망막에 맺히도록 돕는다.'
+ :'원시는 가까운 곳을 볼 때 초점이 망막 뒤쪽에 맺히기 쉬운 상태다. 볼록렌즈는 빛을 모아 눈에 들어오도록 하여 초점이 망막에 맺히도록 돕는다.';
+ const lens=document.getElementById('lens');
+ lens.setAttribute('d',myopia?'M270 25 Q300 115 270 205 Q240 115 270 25Z':'M270 25 Q205 115 270 205 Q335 115 270 25Z');
+ const paths=myopia
+ ?['M35 60L270 60L570 115','M35 115L270 115L570 115','M35 170L270 170L570 115']
+ :['M35 60L270 60L570 115','M35 115L270 115L570 115','M35 170L270 170L570 115'];
+ ['ray1','ray2','ray3'].forEach((id,i)=>document.getElementById(id).setAttribute('d',paths[i]));
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,299 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>식물은 칭찬을 알아들을까? | 유사과학 검증 잡지</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#e9efe6;--paper:#f6f9f3;--card:#ffffff;--ink:#13261c;--mute:#52665a;--leaf:#2b8a57;--leaf2:#d3ebd9;--hot:#e4b300;--bad:#b4472f;--line:#c5d3c6;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0c1712;--paper:#12211a;--card:#1a2c23;--ink:#e6f1e8;--mute:#9db3a5;--leaf:#6fd09a;--leaf2:#1f3b2c;--hot:#f0c93a;--bad:#ef8a70;--line:#2b4437}}
+:root[data-theme="dark"]{--bg:#0c1712;--paper:#12211a;--card:#1a2c23;--ink:#e6f1e8;--mute:#9db3a5;--leaf:#6fd09a;--leaf2:#1f3b2c;--hot:#f0c93a;--bad:#ef8a70;--line:#2b4437}
+html{scroll-behavior:smooth;scroll-padding-top:calc(60px + env(safe-area-inset-top,0px))}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.8 'Noto Sans KR',system-ui,sans-serif}
+.serif,h1,h2{font-family:'Gowun Batang','Nanum Myeongjo',serif}
+nav{position:sticky;top:0;z-index:10;background:var(--paper);border-bottom:1px solid var(--line);padding:8px 14px;padding-top:calc(8px + env(safe-area-inset-top,0px));display:flex;gap:6px;overflow-x:auto;scrollbar-width:none}
+nav a{white-space:nowrap;color:var(--ink);text-decoration:none;font-size:14px;padding:6px 12px;border-radius:99px;border:1px solid var(--line)}
+nav a:hover,nav a:focus-visible{background:var(--leaf2);outline:2px solid var(--leaf)}
+main{max-width:860px;margin:0 auto;background:var(--paper)}
+.hero{background:#10281d;color:#eaf6ec;padding:56px 7% 0;overflow:hidden}
+.hero small{color:#9fd9b4;font-size:14px}
+.hero h1{font-size:clamp(46px,11vw,92px);line-height:1.1;letter-spacing:-.05em;margin:18px 0 18px;font-weight:700}
+.hero p{max-width:480px;color:#cfe6d6;margin:0 0 24px}
+.wave{display:block;width:100%;height:140px;margin-top:10px}
+.wave path{fill:none;stroke:#6fd09a;stroke-width:3;stroke-linecap:round}
+.wave .w2{stroke:#e4b300;opacity:.8}
+@media(prefers-reduced-motion:no-preference){.wave path{stroke-dasharray:1200;stroke-dashoffset:1200;animation:draw 2.4s ease-out forwards}.wave .w2{animation-delay:.5s}}
+@keyframes draw{to{stroke-dashoffset:0}}
+section{padding:60px 7%;border-top:1px solid var(--line)}
+h2{font-size:clamp(28px,5vw,40px);line-height:1.3;letter-spacing:-.04em;margin:0 0 20px}
+p{margin:0 0 16px;max-width:62ch}
+.kicker{font-size:14px;color:var(--leaf);font-weight:700;margin-bottom:6px}
+.note{font-size:14px;color:var(--mute)}
+.callout{background:var(--leaf2);border-left:5px solid var(--leaf);padding:18px 20px;border-radius:0 10px 10px 0;margin:22px 0}
+.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:22px 0}
+.grid4 button{background:var(--card);border:2px solid var(--line);border-radius:12px;padding:14px 6px;color:var(--ink);font:inherit;cursor:pointer}
+.grid4 button[aria-pressed="true"]{border-color:var(--leaf);background:var(--leaf2)}
+.grid4 b{display:block;font-size:30px;line-height:1.3}
+#factorText{min-height:56px}
+.chart{display:flex;gap:14px;align-items:flex-end;height:250px;border-bottom:2px solid var(--mute);margin:24px 0 8px;padding-top:20px}
+.col{flex:1;text-align:center}
+.bar{height:0;background:var(--leaf);border-radius:8px 8px 0 0;color:#fff;font-weight:700;padding-top:8px;transition:height 1s cubic-bezier(.2,.8,.2,1)}
+.col:nth-child(1) .bar{background:#7b8f83}
+.col:nth-child(3) .bar{background:var(--hot);color:#13261c}
+.col small{display:block;font-size:13px;line-height:1.4;padding-top:6px}
+.vs{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:20px 0}
+.vs div{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px}
+.vs h3{margin:0 0 6px;font-size:18px}
+.lab{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:20px;margin-top:20px}
+.choices{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}
+.choices button,.q button{background:var(--paper);border:2px solid var(--line);border-radius:10px;padding:12px 8px;color:var(--ink);font:inherit;cursor:pointer}
+.choices button[aria-pressed="true"]{border-color:var(--leaf);background:var(--leaf2);font-weight:700}
+.plants{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:20px 0}
+.plant{text-align:center;background:var(--paper);border-radius:12px;padding:12px 4px}
+.plant .e{display:block;font-size:44px;transform-origin:bottom;transition:transform .4s}
+.plant strong{font-size:12px;display:block;line-height:1.3}
+.meter{height:8px;background:var(--line);border-radius:6px;margin:8px 6px 4px;overflow:hidden}
+.meter i{display:block;height:100%;background:var(--leaf);transition:width .4s}
+.chk label{display:flex;gap:10px;align-items:center;padding:6px 0;cursor:pointer}
+.chk input{width:20px;height:20px;accent-color:var(--leaf)}
+#ctrlMsg{font-weight:700;margin-top:8px}
+.q{border-top:1px solid var(--line);padding:14px 0}
+.q div{display:flex;gap:8px;margin-top:8px}
+.q p{margin:0}
+.q .ok{border-color:var(--leaf);background:var(--leaf2)}
+.q .no{border-color:var(--bad)}
+.q em{display:block;font-style:normal;font-size:15px;color:var(--mute);margin-top:6px}
+.concl{background:var(--leaf2)}
+footer{padding:30px 7% 50px;font-size:14px;color:var(--mute)}
+footer a{color:var(--leaf);word-break:break-all}
+.fig{width:100%;max-width:520px;display:block;margin:18px auto}.s-leaf{fill:var(--leaf)}.s-t{fill:var(--ink);font:500 13px 'Noto Sans KR',sans-serif}.s-ln{stroke:var(--mute);stroke-width:2;stroke-dasharray:5 4;fill:none}
+.tip{display:flex;gap:12px;align-items:flex-start;background:var(--card);border:2px dashed var(--hot);border-radius:14px;padding:14px 16px;margin:20px 0}.tip span{font-size:30px;line-height:1}.tip p{margin:0;font-size:16px}
+.wv{width:100%;height:60px;display:block}.wv path{fill:none;stroke:var(--leaf);stroke-width:2.5}
+.flow{display:flex;align-items:center;justify-content:center;gap:6px;flex-wrap:wrap;margin:22px 0}.node{background:var(--card);border:2px solid var(--line);border-radius:14px;padding:12px 10px;text-align:center;min-width:92px;font-size:14px}.node b{display:block;font-size:30px;line-height:1.3}.node.unk{border-style:dashed;border-color:var(--bad)}.arr{font-size:22px;color:var(--mute)}
+.tl{list-style:none;margin:24px 0;padding:0 0 0 22px;border-left:3px solid var(--leaf)}.tl li{position:relative;margin-bottom:20px;padding-left:10px}.tl li:before{content:'';position:absolute;left:-34px;top:8px;width:14px;height:14px;border-radius:50%;background:var(--hot);border:3px solid var(--paper)}.tl b{display:block}
+.why{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.why div{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 10px;text-align:center;font-size:14px;line-height:1.6}.why b{display:block;font-size:34px;line-height:1.3}
+.pick{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px;margin-top:20px}.row{display:flex;gap:6px;align-items:flex-end;height:110px;border-bottom:2px solid var(--mute);margin-bottom:6px}.row i{flex:1;background:var(--leaf);border-radius:4px 4px 0 0;transition:opacity .3s,height .3s}.row i.off{opacity:0;height:0!important}.row.ctl i{background:#7b8f83}.pick button{background:var(--leaf);color:var(--paper);border:0;border-radius:99px;padding:10px 18px;font:inherit;font-weight:700;cursor:pointer;margin-top:12px}
+@media(max-width:600px){.grid4,.plants{grid-template-columns:repeat(2,1fr)}.vs,.why{grid-template-columns:1fr}.plant .e{font-size:38px}}
+.tl{border-left:3px solid var(--leaf);margin:20px 0 0 8px;padding-left:20px}
+.tl div{position:relative;margin-bottom:18px}
+.tl div::before{content:"";position:absolute;left:-29px;top:9px;width:14px;height:14px;border-radius:50%;background:var(--hot);border:3px solid var(--paper)}
+.tl b{display:block;font-family:'Gowun Batang',serif;font-size:22px}
+.flow{display:flex;gap:6px;flex-wrap:wrap}
+.flow span{flex:1 1 110px;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px 6px;text-align:center;font-size:14px;line-height:1.5;position:relative}
+.flow span:not(:last-child)::after{content:"›";position:absolute;right:-9px;top:50%;transform:translateY(-50%);color:var(--leaf);font-size:24px;font-weight:700;z-index:1}
+.cards{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+.cards div{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px;line-height:1.5}
+.cards b{display:block;font-size:30px}
+.cards small{color:var(--mute)}
+.bgrid{display:grid;grid-template-columns:repeat(6,1fr);gap:6px;margin:18px 0 8px}
+.bgrid div{text-align:center;background:var(--paper);border-radius:10px;padding:6px 0;font-size:26px;position:relative;transition:opacity .4s}
+.bgrid div i{position:absolute;top:-6px;right:2px;font-size:14px;font-style:normal}
+.bgrid .dim{opacity:.12}
+</style>
+</head>
+<body>
+<nav aria-label="목차">
+<a href="../../index.html" aria-label="SCIENCE WORLD 서가로 돌아가기">← 서가</a>
+<a href="#top">표지</a><a href="#s1">성장 조건</a><a href="#s2">소리 연구</a><a href="#s3">말과 진동</a><a href="#origin">소문의 유래</a><a href="#s4">가상 실험</a><a href="#s5">결론</a>
+</nav>
+<main>
+<header class="hero" id="top">
+<small>유사과학 검증 · 온라인 과학 잡지</small>
+<h1>식물은<br>칭찬을<br>알아들을까?</h1>
+<p>“사랑해”라고 말하면 식물이 더 잘 자란다는 이야기, 정말 과학일까요? 연구 결과와 가상 실험으로 직접 따져 봐요.</p>
+<svg class="wave" viewBox="0 0 800 140" preserveAspectRatio="none" aria-hidden="true">
+<path d="M0 70 Q25 10 50 70 T100 70 T150 70 T200 70 T250 70 T300 70 T350 70 T400 70 T450 70 T500 70 T550 70 T600 70 T650 70 T700 70 T750 70 T800 70"/>
+<path class="w2" d="M0 70 Q6 40 12 70 T24 70 T36 70 T48 70 T60 70 T72 70 T84 70 T96 70 T108 70 T120 70 T132 70 T144 70 T156 70 T168 70 T180 70 T192 70 T204 70 T216 70 T228 70 T240 70 T252 70 T264 70 T276 70 T288 70 T300 70 T312 70 T324 70 T336 70 T348 70 T360 70 T372 70 T384 70 T396 70 T408 70 T420 70 T432 70 T444 70 T456 70 T468 70 T480 70 T492 70 T504 70 T516 70 T528 70 T540 70 T552 70 T564 70 T576 70 T588 70 T600 70 T612 70 T624 70 T636 70 T648 70 T660 70 T672 70 T684 70 T696 70 T708 70 T720 70 T732 70 T744 70 T756 70 T768 70 T780 70 T792 70"/>
+</svg>
+</header>
+
+<section id="s1">
+<div class="kicker">식물은 무엇으로 자랄까?</div>
+<h2>칭찬만 먹고<br>자랄 수 있을까?</h2>
+<p>화분 두 개가 있어요. 하나는 햇빛을 충분히 받고, 다른 하나는 어두운 곳에 있어요. 어느 쪽이 더 잘 자랄까요? 아래 조건을 눌러 보세요.</p>
+<div class="grid4" id="factors">
+<button aria-pressed="false" data-t="빛은 광합성에 필요한 에너지를 줘요."><b>☀️</b>빛</button>
+<button aria-pressed="false" data-t="물은 영양분을 운반하고 광합성에도 쓰여요."><b>💧</b>물</button>
+<button aria-pressed="false" data-t="온도와 식물의 유전적 특징에 따라 성장 속도와 모습이 달라져요."><b>🌡️</b>온도</button>
+<button aria-pressed="false" data-t="다량·미량 영양소가 모두 중요해서, 부족하면 성장이 느려질 수 있어요."><b>🌱</b>영양분</button>
+</div>
+<p id="factorText" class="note">조건을 하나 선택해 보세요.</p>
+<svg class="fig" viewBox="0 0 420 250" role="img" aria-label="식물 성장 요소: 빛, 물, 온도, 영양분. 소리는 물음표">
+<circle cx="48" cy="42" r="22" fill="#e4b300"/><text class="s-t" x="14" y="88">☀️ 빛: 에너지</text>
+<path class="s-ln" d="M68 58 L168 112"/>
+<path d="M350 22 Q332 50 350 62 Q368 50 350 22Z" fill="#4aa3df"/><text class="s-t" x="296" y="88">💧 물: 운반</text>
+<path class="s-ln" d="M335 66 L232 128"/>
+<path d="M210 215 V118" stroke="var(--leaf)" stroke-width="6" fill="none"/>
+<path class="s-leaf" d="M210 150 Q160 125 148 104 Q196 98 210 150Z"/><path class="s-leaf" d="M210 135 Q258 108 274 88 Q250 140 210 135Z"/>
+<path d="M180 212 h60 l-9 34 h-42Z" fill="#a8643a"/>
+<text class="s-t" x="262" y="170">🌡️ 온도: 속도·모습</text><text class="s-t" x="250" y="232">🌱 영양분: 재료</text><text class="s-t" x="10" y="200">🔊 소리는?</text>
+<circle cx="96" cy="150" r="22" fill="none" stroke="var(--bad)" stroke-width="2.5" stroke-dasharray="5 4"/><text x="96" y="160" text-anchor="middle" font-size="28" font-weight="700" fill="var(--bad)">?</text>
+</svg>
+<div class="callout">그래서 소리의 효과를 알아보려면 <strong>같은 종류의 식물</strong>을 쓰고 <strong>다른 조건은 똑같이</strong> 유지해야 해요. 이것을 <strong>변인 통제</strong>라고 불러요.</div>
+<div class="tip"><span>🍜</span><p><b>쉽게 말하면</b> 라면 맛을 비교할 때 물 양은 똑같이 맞추는 것과 같아요. 물이 다르면 맛 차이가 어디서 왔는지 알 수 없잖아요.</p></div>
+</section>
+
+<section id="s2">
+<div class="kicker">소리는 식물에게 어떤 영향을 줄까?</div>
+<h2>그런데 소리도<br>영향을 준다고?</h2>
+<p>Kim과 연구진은 애기장대라는 작은 식물에게 소리를 들려줬어요. 하루 15시간씩 3일 동안 들려주고, 씨앗을 심은 지 5일째에 뿌리 길이를 비교했어요. 주파수(Hz)는 소리가 1초에 몇 번 진동하는지를 나타내요.</p>
+<div class="chart" id="chart" role="img" aria-label="평균 뿌리 길이: 소리 없음 15.70mm, 100Hz 17.68mm, 100Hz와 9000Hz 18.42mm">
+<div class="col"><div class="bar" data-v="15.70"></div><small>소리 없음</small></div>
+<div class="col"><div class="bar" data-v="17.68"></div><small>100Hz<br>+12.6%</small></div>
+<div class="col"><div class="bar" data-v="18.42"></div><small>100Hz + 9,000Hz<br>+17.3%</small></div>
+</div>
+<p class="note">평균 뿌리 길이(mm). 막대는 0부터 시작해요. 증가율은 소리 없음 대비 계산한 값이에요.</p>
+<figure style="margin:22px 0"><svg id="w1" class="wv" viewBox="0 0 400 60" aria-hidden="true"></svg><div class="note">🎵 100Hz: 느리고 굵은 떨림</div><svg id="w2" class="wv" viewBox="0 0 400 60" aria-hidden="true"></svg><div class="note">🎶 100Hz + 9,000Hz: 굵은 떨림 위에 촘촘한 잔떨림 (모양을 보여주는 그림이며 실제 비율은 아니에요)</div></figure>
+<p>소리를 들은 식물은 뿌리 세포 분열과 성장을 조절하는 식물 호르몬에도 변화가 있었어요.</p>
+<div class="tip"><span>🌬️</span><p><b>쉽게 말하면</b> 바람이 불면 나뭇잎이 흔들려요. 하지만 바람이 나무에게 말을 건 건 아니죠. 소리에 반응하는 것과 말뜻을 아는 것은 달라요.</p></div>
+<div class="callout">이 연구는 <strong>특정 소리 자극이 식물 성장에 영향을 줄 수 있다</strong>는 것을 보여줘요. 하지만 식물이 사람의 말뜻을 알아듣는다는 증거는 아니에요.</div>
+</section>
+
+<section id="s3">
+<div class="kicker">칭찬의 의미를 이해하는 걸까?</div>
+<h2>“사랑해”라는 말과<br>소리의 진동은 달라요</h2>
+<p>식물이 반응한다면, 이유는 둘 중 하나예요. 어느 쪽인지 구별해야 해요.</p>
+<svg viewBox="0 0 700 210" role="img" aria-label="사람의 말이 소리의 진동으로 식물에 전달되지만 뜻이 전달되는지는 알 수 없다는 그림" style="width:100%;height:auto;margin:10px 0">
+<text x="20" y="130" font-size="58">🗣️</text>
+<rect x="100" y="40" width="120" height="44" rx="22" fill="var(--leaf2)" stroke="var(--leaf)" stroke-width="2"/>
+<text x="160" y="69" font-size="18" text-anchor="middle" fill="var(--ink)">“사랑해”</text>
+<path d="M110 135 Q130 95 150 135 T190 135 T230 135 T270 135 T310 135 T350 135 T390 135 T430 135" fill="none" stroke="var(--leaf)" stroke-width="4" stroke-linecap="round"/>
+<text x="270" y="180" font-size="15" text-anchor="middle" fill="var(--ink)">✅ 진동(주파수·크기)은 전달돼요</text>
+<text x="520" y="150" font-size="64">🌱</text>
+<rect x="470" y="30" width="180" height="46" rx="10" fill="none" stroke="var(--bad)" stroke-width="2" stroke-dasharray="6 5"/>
+<text x="560" y="59" font-size="17" text-anchor="middle" fill="var(--bad)">❓ 뜻도 전달될까?</text>
+</svg>
+<div class="flow" aria-label="사랑해라는 말이 진동이 되어 식물에 닿지만 뜻이 전해지는지는 물음표"><div class="node"><b>🗣️</b>“사랑해”</div><span class="arr">→</span><div class="node"><b>〰️</b>공기의 진동</div><span class="arr">→</span><div class="node"><b>🌱</b>식물에 닿음</div><span class="arr">→</span><div class="node unk"><b>❓</b>뜻까지?</div></div>
+<div class="tip"><span>📻</span><p><b>쉽게 말하면</b> 모르는 나라 말 라디오를 크게 틀어 놓은 것과 같아요. 뜻은 몰라도 스피커의 떨림은 느낄 수 있죠.</p></div>
+<div class="vs">
+<div><h3>🗣️ 말의 의미</h3>사람에게만 전해지는 뜻이에요. 식물이 이해한다는 근거는 아직 없어요.</div>
+<div><h3>〰️ 소리의 진동</h3>공기의 물리적 자극이에요. 주파수와 크기에 따라 식물이 반응할 가능성이 있어요.</div>
+</div>
+</section>
+
+<section id="origin">
+<div class="kicker">유사과학은 어떻게 생겨났을까?</div>
+<h2>그럴듯한 이야기는<br>이렇게 퍼져요</h2>
+<p class="note">보고서 밖의 배경 설명이에요. 웹 자료를 찾아 확인한 내용이고, 출처는 맨 아래에 있어요.</p>
+<div class="callout">
+<strong>시작은 한 사람의 신기한 관찰이었어요.</strong> 1960년대에 한 거짓말탐지기 전문가가 “식물이 사람의 감정에 반응한다”고 주장했고, 1970년대 초 인기 책이 이 이야기를 널리 퍼뜨렸어요.<br><br>하지만 다른 연구자들이 다시 실험하자 같은 결과가 나오지 않았어요. 그래도 따뜻하고 그럴듯한 이야기라 계속 전해진 거예요.
+
+
+
+
+</div>
+<h3 class="serif" style="font-size:22px;margin:34px 0 10px">소문이 굳어지는 5단계</h3>
+<div class="flow"><span>👀<br>작은 관찰</span><span>💡<br>그럴듯한 설명</span><span>🧺<br>맞는 사례만 모으기</span><span>📲<br>널리 전파</span><span>🏛️<br>상식처럼 굳음</span></div>
+<h3 class="serif" style="font-size:22px;margin:34px 0 10px">왜 믿게 될까?</h3>
+<div class="cards">
+<div><b>🔍</b>맞는 사례만 기억해요<br><small>확증 편향</small></div>
+<div><b>📖</b>이야기가 그럴듯해요<br><small>“진동”이라는 진짜 과학과 섞여요</small></div>
+<div><b>💗</b>믿고 싶은 마음이에요<br><small>식물을 아끼는 따뜻한 이미지</small></div>
+<div><b>📲</b>반복해서 들려요<br><small>자주 들으면 사실처럼 느껴져요</small></div>
+</div>
+<div class="lab">
+<strong>기억에 남는 사례의 함정</strong>
+<p class="note">가상의 식물 12개예요. 💬는 칭찬을 들은 식물이에요.</p>
+<div class="choices"><button id="biasA" aria-pressed="true">기억에 남는 사례만</button><button id="biasB" aria-pressed="false">전체 사례 보기</button></div>
+<div class="bgrid" id="bgrid"></div>
+<p id="biasMsg"></p>
+</div>
+</section>
+
+<section id="s3b">
+<div class="kicker">골라 보면 증거처럼 보여요</div>
+<h2>같은 결과도<br>골라 보면 달라져요</h2>
+<div class="pick">
+<strong>🔍 골라 보면 증거처럼 보여요</strong>
+<p class="note" style="margin:4px 0 12px">칭찬한 화분 10개와 소리 없는 화분 10개의 가상 성장 결과예요.</p>
+<div class="note">💬 칭찬한 화분</div><div class="row" id="rowA"></div>
+<div class="note">🔇 소리 없는 화분</div><div class="row ctl" id="rowB"></div>
+<p id="pickMsg" style="margin:10px 0 0"></p>
+<button id="pickBtn" type="button"></button>
+</div>
+</section>
+
+<section id="s4">
+<div class="kicker">직접 해보는 가상 실험</div>
+<h2>가상 식물 실험실</h2>
+<p>네 집단에 서로 다른 소리를 들려준다고 가정해요. 결과 상황을 고르면 어떻게 해석하는지 알려줘요.</p>
+<div class="tip"><span>🎲</span><p><b>쉽게 말하면</b> 주사위를 한 번 던져 6이 나왔다고 “6만 나오는 주사위”라고 할 순 없어요. 그래서 반복해서 확인해요.</p></div>
+<div class="lab">
+<div class="choices" id="cases">
+<button data-k="positive" aria-pressed="false">A만 더 잘 자람</button>
+<button data-k="sound" aria-pressed="true">소리 들은 집단이 잘 자람</button>
+<button data-k="equal" aria-pressed="false">모두 비슷하게 자람</button>
+<button data-k="random" aria-pressed="false">집단마다 조금씩 다름</button>
+</div>
+<div class="plants" id="plants"></div>
+<p id="interp"></p>
+<p class="note">⚠️ 성장 수치는 설명을 위해 임의로 정한 가상 수치예요. 실제 측정값이 아니며 위 연구 결과와 구분해야 해요.</p>
+</div>
+<div class="lab">
+<strong>변인 통제 체크리스트</strong>
+<p class="note">같게 맞춘 조건에 체크해 보세요.</p>
+<div class="chk" id="chk">
+<label><input type="checkbox"> 식물 종류</label>
+<label><input type="checkbox"> 빛·물·온도·영양분</label>
+<label><input type="checkbox"> 소리 크기</label>
+<label><input type="checkbox"> 소리 주파수</label>
+</div>
+<div id="ctrlMsg">체크가 하나도 없어요.</div>
+</div>
+</section>
+
+<section id="s5" class="concl">
+<div class="kicker">우리가 내릴 수 있는 결론</div>
+<h2>식물은 소리에 반응할 수 있어요.<br>그런데 말뜻도 알까요?</h2>
+<p>특정한 소리가 식물 성장에 영향을 줄 수 있다는 연구 결과는 있어요. 하지만 그것만으로 식물이 긍정적인 말의 의미를 이해해서 더 잘 자란다고 할 수는 없어요.</p>
+<p>과학에서는 그럴듯한 이야기도 바로 믿지 않아요. 조건을 통제하고, 비교하고, 반복해서 검증하는 과정이 중요해요.</p>
+<div class="tip"><span>🕵️</span><p><b>쉽게 말하면</b> 과학자는 탐정이에요. 범인 같아 보여도 증거가 모일 때까지는 “용의자”라고 불러요.</p></div>
+<div class="callout" style="background:var(--paper)"><strong>우리의 결론:</strong> “칭찬하면 식물이 더 잘 자란다”는 주장은 아직 충분히 과학적으로 입증되지 않았어요.</div>
+<h3 class="serif" style="font-size:22px;margin:30px 0 4px">마지막 퀴즈</h3>
+<div id="quiz"></div>
+</section>
+
+<footer>
+<p>식물의 소리 반응과 주변 환경의 영향에 대한 과학적 탐구 · 1차 탐구 보고서 기반</p>
+<p>출처<br>
+<a href="https://openstax.org/books/biology-2e/pages/31-1-nutritional-requirements-of-plants">openstax.org/books/biology-2e/pages/31-1-nutritional-requirements-of-plants</a><br>
+<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC8199107/">pmc.ncbi.nlm.nih.gov/articles/PMC8199107/</a></p>
+<p>소문의 유래 부분 참고<br>
+<a href="https://en.wikipedia.org/wiki/Cleve_Backster">en.wikipedia.org/wiki/Cleve_Backster</a><br>
+<a href="https://botany.org/psbarchive/issue/1974-v20-no-4.html">botany.org/psbarchive/issue/1974-v20-no-4.html</a></p>
+</footer>
+</main>
+<script>
+const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
+// 01 factors
+$$('#factors button').forEach(b=>b.onclick=()=>{$$('#factors button').forEach(x=>x.setAttribute('aria-pressed',x===b));$('#factorText').textContent=b.dataset.t;$('#factorText').classList.remove('note')});
+// 02 chart animates when visible
+const bars=$$('.bar'),fill=()=>bars.forEach(b=>b.style.height=(b.dataset.v/20*100)+'%');
+if('IntersectionObserver' in window){new IntersectionObserver((e,o)=>{if(e[0].isIntersecting){fill();o.disconnect()}},{threshold:.4}).observe($('#chart'))}else fill();
+// 04 lab
+const cases={positive:{v:[7,4,4,4],t:'A집단만 더 자랐다면 긍정적인 말과 성장 사이의 관계를 살펴볼 수 있어요. 하지만 말뜻을 이해했다고 단정할 수는 없어요. 반복 실험이 필요해요.'},sound:{v:[7,7,7,4],t:'소리를 들은 세 집단이 모두 더 자랐다면 말의 의미보다 소리의 물리적 자극이 영향을 줬을 가능성이 있어요.'},equal:{v:[5,5,5,5],t:'모든 집단이 비슷하다면 이 조건에서는 소리에 따른 성장 차이를 확인하지 못한 거예요.'},random:{v:[5.5,4.8,6,5.2],t:'조금씩 차이가 난다고 모두 소리 때문은 아니에요. 자연스러운 개체 차이도 있으니 여러 식물을 반복 측정해야 해요.'}};
+const labels=['A 긍정적인 말','B 부정적인 말','C 의미 없는 소리','D 소리 없음'];
+function setCase(k){$$('#cases button').forEach(b=>b.setAttribute('aria-pressed',b.dataset.k===k));$('#plants').innerHTML=cases[k].v.map((v,i)=>`<div class="plant"><span class="e" style="transform:scale(${(.7+v/14).toFixed(2)})">🌱</span><strong>${labels[i]}</strong><div class="meter"><i style="width:${v/8*100}%"></i></div><small>${v.toFixed(1)} cm</small></div>`).join('');$('#interp').textContent=cases[k].t}
+$$('#cases button').forEach(b=>b.onclick=()=>setCase(b.dataset.k));setCase('sound');
+$$('#chk input').forEach(c=>c.onchange=()=>{const n=$$('#chk input:checked').length;$('#ctrlMsg').textContent=n===4?'모두 통제했어요. 소리 조건의 영향을 비교하기 좋아요.':n===0?'체크가 하나도 없어요.':`${4-n}개 조건이 달라요. 결과가 소리 때문인지 알기 어려워요.`});
+// bias demo
+const items=[[1,1],[1,1],[1,1],[1,0],[1,0],[1,0],[0,1],[0,1],[0,1],[0,0],[0,0],[0,0]];
+function setBias(mem){$('#biasA').setAttribute('aria-pressed',mem);$('#biasB').setAttribute('aria-pressed',!mem);$('#bgrid').innerHTML=items.map(([p,g])=>`<div class="${mem&&!(p&&g)?'dim':''}">${g?'🌱':'🥀'}${p?'<i>💬</i>':''}</div>`).join('');$('#biasMsg').textContent=mem?'칭찬받고 잘 자란 3개만 눈에 띄면 “칭찬이 통했다!” 싶어요.':'전체로 보면 칭찬받은 6개 중 3개, 못 받은 6개 중 3개가 잘 자랐어요. 차이가 없어요. (가상 사례)'}
+$('#biasA').onclick=()=>setBias(true);$('#biasB').onclick=()=>setBias(false);setBias(true);
+// waves
+function wave(id,fn){let d='M0 30';for(let x=0;x<=400;x+=2)d+=` L${x} ${(30-fn(x)).toFixed(1)}`;$(id).innerHTML=`<path d="${d}"/>`}
+const T=Math.PI*2/400;wave('#w1',x=>22*Math.sin(x*T*4));wave('#w2',x=>15*Math.sin(x*T*4)+8*Math.sin(x*T*40));
+// cherry-pick demo
+const pv=[5,7,4,9,6,5,8,4,6,10],cv=[6,5,7,6,8,5,6,7,4,9];let ch=false;
+function drawPick(){$('#rowA').innerHTML=pv.map(v=>`<i class="${ch&&v<7?'off':''}" style="height:${v*10}%"></i>`).join('');$('#rowB').innerHTML=cv.map(v=>`<i style="height:${v*10}%"></i>`).join('');$('#pickMsg').textContent=ch?'와, 칭찬한 화분이 훨씬 커 보여요! 하지만 잘 자란 4개만 골라 보여준 결과예요.':'전체를 보면 평균이 6.4 대 6.3으로 거의 같아요.';$('#pickBtn').textContent=ch?'전체 다시 보기':'잘 자란 것만 골라 보기'}
+$('#pickBtn').onclick=()=>{ch=!ch;drawPick()};drawPick();
+// 05 quiz
+const qs=[['식물이 소리에 반응할 가능성을 보여준 연구가 있다.',true,'맞아요. 애기장대 뿌리 길이가 달라졌어요.'],['이 연구는 식물이 사람의 말뜻을 이해한다는 증거다.',false,'아니에요. 소리의 진동에 반응했다는 결과예요.'],['실험에서는 소리 외의 조건을 똑같이 맞춰야 한다.',true,'맞아요. 이것이 변인 통제예요.']];
+$('#quiz').innerHTML=qs.map((q,i)=>`<div class="q" data-i="${i}"><p>${q[0]}</p><div><button data-a="1">맞아요</button><button data-a="0">아니에요</button></div><em hidden></em></div>`).join('');
+$$('#quiz .q').forEach(el=>el.querySelectorAll('button').forEach(b=>b.onclick=()=>{const q=qs[el.dataset.i],ok=(b.dataset.a==='1')===q[1];el.querySelectorAll('button').forEach(x=>x.className='');b.className=ok?'ok':'no';const em=el.querySelector('em');em.hidden=false;em.textContent=(ok?'정답! ':'다시 생각해 봐요. ')+q[2]}));
+</script>
+</body>
+</html>

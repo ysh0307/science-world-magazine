@@ -1,0 +1,433 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>산성비 맞으면 대머리 될까? | 유사과학 검증 잡지</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=IBM+Plex+Mono:wght@500;600&family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#e9eef2;--paper:#f6f8fa;--card:#ffffff;--ink:#14202b;--mute:#566573;--acc:#c0501b;--acc2:#fbe4d5;--hot:#d9a400;--bad:#a8403f;--ok:#2b7552;--line:#cbd5de;--hero:#14202b;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0c1219;--paper:#121b24;--card:#1a2631;--ink:#e8eef3;--mute:#9fb0be;--acc:#f08350;--acc2:#3a2418;--hot:#f2c23e;--bad:#ef8a84;--ok:#5cc59a;--line:#2b3b49;--hero:#0a1017}}
+:root[data-theme="dark"]{--bg:#0c1219;--paper:#121b24;--card:#1a2631;--ink:#e8eef3;--mute:#9fb0be;--acc:#f08350;--acc2:#3a2418;--hot:#f2c23e;--bad:#ef8a84;--ok:#5cc59a;--line:#2b3b49;--hero:#0a1017}
+html{scroll-behavior:smooth;scroll-padding-top:calc(60px + env(safe-area-inset-top,0px))}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.8 'Noto Sans KR',system-ui,sans-serif}
+.serif,h1,h2{font-family:'Gowun Batang','Nanum Myeongjo',serif}
+nav{position:sticky;top:0;z-index:10;background:var(--paper);border-bottom:1px solid var(--line);padding:8px 14px;padding-top:calc(8px + env(safe-area-inset-top,0px));display:flex;gap:6px;overflow-x:auto;scrollbar-width:none}
+nav a{white-space:nowrap;color:var(--ink);text-decoration:none;font-size:14px;padding:6px 12px;border-radius:99px;border:1px solid var(--line)}
+nav a:hover,nav a:focus-visible{background:var(--acc2);outline:2px solid var(--acc)}
+main{max-width:860px;margin:0 auto;background:var(--paper)}
+.hero{background:var(--hero);color:#eef3f7;padding:56px 7% 0;overflow:hidden}
+.hero small{color:#f3b48f;font-size:14px}
+.hero h1{font-size:clamp(46px,11vw,92px);line-height:1.1;letter-spacing:-.05em;margin:18px 0 18px;font-weight:700}
+.hero h1 em{font-style:normal;color:#f08350}
+.hero p{max-width:480px;color:#cdd9e3;margin:0 0 24px}
+.spec{display:grid;grid-template-columns:repeat(14,1fr);height:120px;margin:10px -7.5% 0;align-items:end}
+.spec span{display:flex;align-items:flex-end;justify-content:center;padding-bottom:6px;font:600 11px 'IBM Plex Mono',monospace;color:rgba(255,255,255,.92);height:100%}
+@media(prefers-reduced-motion:no-preference){.spec span{transform-origin:bottom;animation:rise .9s cubic-bezier(.2,.8,.2,1) backwards;animation-delay:calc(var(--i)*70ms)}}
+@keyframes rise{from{transform:scaleY(.05)}}
+section{padding:60px 7%;border-top:1px solid var(--line)}
+h2{font-size:clamp(28px,5vw,40px);line-height:1.3;letter-spacing:-.04em;margin:0 0 20px}
+h3{margin:0}
+p{margin:0 0 16px;max-width:62ch}
+.kicker{font-size:14px;color:var(--acc);font-weight:700;margin-bottom:6px}
+.note{font-size:14px;color:var(--mute)}
+.callout{background:var(--acc2);border-left:5px solid var(--acc);padding:18px 20px;border-radius:0 10px 10px 0;margin:22px 0}
+.tip{display:flex;gap:12px;align-items:flex-start;background:var(--card);border:2px dashed var(--hot);border-radius:14px;padding:14px 16px;margin:20px 0}.tip span{font-size:30px;line-height:1}.tip p{margin:0;font-size:16px}
+.vs{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:20px 0}
+.vs div{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px}
+.vs h3{margin:0 0 6px;font-size:18px}
+.lab{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:20px;margin-top:20px}
+.choices{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}
+.choices button,.q button,.btn{background:var(--paper);border:2px solid var(--line);border-radius:10px;padding:12px 8px;color:var(--ink);font:inherit;cursor:pointer;min-height:44px}
+.choices button[aria-pressed="true"],.btn[aria-pressed="true"]{border-color:var(--acc);background:var(--acc2);font-weight:700}
+:focus-visible{outline:3px solid var(--acc);outline-offset:2px}
+.fig{width:100%;display:block;margin:18px auto}
+.fig img{width:100%;height:auto;border-radius:12px;border:1px solid var(--line);display:block}
+figure{margin:18px 0}figcaption{font-size:14px;color:var(--mute);margin-top:8px}
+.cards{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+.cards div{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px;line-height:1.5}
+.cards b{display:block;font-size:30px}
+.cards small{color:var(--mute)}
+.steps{display:flex;gap:6px;flex-wrap:wrap;margin:18px 0}
+.steps span{flex:1 1 110px;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px 6px;text-align:center;font-size:14px;line-height:1.5;position:relative}
+.steps span:not(:last-child)::after{content:"›";position:absolute;right:-9px;top:50%;transform:translateY(-50%);color:var(--acc);font-size:24px;font-weight:700;z-index:1}
+.tl{border-left:3px solid var(--acc);margin:20px 0 0 8px;padding-left:20px}
+.tl div{position:relative;margin-bottom:18px}
+.tl div::before{content:"";position:absolute;left:-29px;top:9px;width:14px;height:14px;border-radius:50%;background:var(--hot);border:3px solid var(--paper)}
+.tl b{display:block;font-family:'Gowun Batang',serif;font-size:22px}
+/* pH 도구 */
+.cup{margin-bottom:16px}
+.cup-h{display:flex;align-items:center;gap:10px;font-weight:700;margin-bottom:6px}
+.strip{display:inline-block;width:14px;height:34px;border-radius:2px;border:1px solid rgba(0,0,0,.25)}
+.picker{display:grid;grid-template-columns:repeat(7,1fr);gap:4px}
+.picker button{height:44px;border-radius:6px;border:2px solid transparent;font:600 13px 'IBM Plex Mono',monospace;color:#fff;text-shadow:0 0 3px rgba(0,0,0,.55);padding:0;cursor:pointer}
+.picker button[aria-pressed="true"]{border-color:var(--ink);box-shadow:0 0 0 2px var(--paper) inset}
+.msg{background:var(--paper);border-radius:10px;padding:12px 14px;margin-top:10px;min-height:56px;font-size:16px}
+.readout{font:600 40px/1 'IBM Plex Mono',monospace}
+.row2{display:flex;gap:14px;align-items:flex-end;justify-content:space-between;flex-wrap:wrap;margin-bottom:10px}
+input[type=range]{width:100%;height:34px;accent-color:var(--acc)}
+.bw{position:relative;padding-top:4px;margin-top:6px}
+.bar{position:relative;height:22px;border-radius:5px;overflow:hidden;border:1px solid var(--line);display:grid;grid-template-columns:repeat(14,1fr)}
+.band{position:absolute;top:0;height:22px;border:2px solid var(--ink);border-radius:3px;background:rgba(255,255,255,.2);pointer-events:none}
+.pin{position:absolute;top:0;width:4px;height:30px;background:var(--ink);box-shadow:0 0 0 2px var(--paper);border-radius:2px;transform:translateX(-2px);transition:left .15s}
+.scale{display:flex;justify-content:space-between;font:500 11px 'IBM Plex Mono',monospace;color:var(--mute);margin-top:4px}
+.btns{display:flex;gap:8px;flex-wrap:wrap;margin:12px 0}
+.btns .btn{padding:8px 12px;font-size:14px;min-height:40px}
+.svgbox{border:1px solid var(--line);border-radius:12px;background:var(--paper);overflow:hidden}
+svg{max-width:100%;height:auto;display:block}
+.t-ink{fill:var(--ink)}.t-mut{fill:var(--mute)}
+.part{cursor:pointer;transition:opacity .15s}
+.dim .part:not(.sel){opacity:.35}
+.part.sel{filter:drop-shadow(0 0 4px var(--acc))}
+.bchart{display:flex;gap:14px;align-items:flex-end;height:220px;border-bottom:2px solid var(--mute);margin:24px 0 8px;padding-top:20px}
+.col{flex:1;text-align:center}
+.bbar{height:0;background:var(--acc);border-radius:8px 8px 0 0;color:#fff;font-weight:700;padding-top:8px;transition:height 1s cubic-bezier(.2,.8,.2,1)}
+.col:nth-child(1) .bbar{background:#9a4a6a}.col:nth-child(3) .bbar{background:var(--hot);color:#14202b}.col:nth-child(4) .bbar{background:#7a8a6a}
+.col small{display:block;font-size:13px;line-height:1.4;padding-top:6px}
+.bgrid{display:grid;grid-template-columns:repeat(6,1fr);gap:6px;margin:18px 0 8px}
+.bgrid div{text-align:center;background:var(--paper);border-radius:10px;padding:6px 0;font-size:26px;position:relative;transition:opacity .4s}
+.bgrid div i{position:absolute;top:-6px;right:2px;font-size:14px;font-style:normal}
+.bgrid .dim{opacity:.12}
+.row{display:flex;gap:6px;align-items:flex-end;height:110px;border-bottom:2px solid var(--mute);margin-bottom:6px}
+.row i{flex:1;background:var(--acc);border-radius:4px 4px 0 0;transition:opacity .3s,height .3s}.row i.off{opacity:0;height:0!important}.row.ctl i{background:#7b8a96}
+.go{background:var(--acc);color:#fff;border:0;border-radius:99px;padding:10px 18px;font:inherit;font-weight:700;cursor:pointer;margin-top:12px;min-height:44px}
+.plants{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:20px 0}
+.plant{text-align:center;background:var(--paper);border-radius:12px;padding:12px 4px}
+.plant .e{display:block;font-size:40px;line-height:1.2}
+.plant strong{font-size:12px;display:block;line-height:1.3}
+.meter{height:8px;background:var(--line);border-radius:6px;margin:8px 6px 4px;overflow:hidden}
+.meter i{display:block;height:100%;background:var(--acc);transition:width .4s}
+.chk label{display:flex;gap:10px;align-items:center;padding:6px 0;cursor:pointer}
+.chk input{width:20px;height:20px;accent-color:var(--acc)}
+#ctrlMsg{font-weight:700;margin-top:8px}
+.q{border-top:1px solid var(--line);padding:14px 0}
+.q .o{display:flex;flex-direction:column;gap:8px;margin-top:8px}
+.q p{margin:0}
+.q button{text-align:left;padding:10px 12px}
+.q .ok{border-color:var(--ok);background:color-mix(in srgb,var(--ok) 16%,var(--paper))}
+.q .no{border-color:var(--bad)}
+.q em{display:block;font-style:normal;font-size:15px;color:var(--mute);margin-top:6px}
+.concl{background:var(--acc2)}
+textarea{width:100%;min-height:10rem;font:inherit;font-size:15px;line-height:1.6;background:var(--paper);color:var(--ink);border:1px solid var(--line);border-radius:10px;padding:12px;resize:vertical}
+footer{padding:30px 7% 50px;font-size:14px;color:var(--mute)}
+footer a{color:var(--acc);word-break:break-all}
+.shrow{margin:16px 0 6px}.shrow .note b{color:var(--ink)}.sel{font:inherit;padding:10px;border:2px solid var(--line);border-radius:10px;background:var(--paper);color:var(--ink);min-height:44px;width:100%}.cmp{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:18px}@media(max-width:600px){.cmp{grid-template-columns:1fr}.plants{grid-template-columns:repeat(2,1fr)}.vs{grid-template-columns:1fr}.spec span{font-size:9px}}
+</style>
+</head>
+<body>
+<nav aria-label="목차">
+<a href="../../index.html" aria-label="SCIENCE WORLD 서가로 돌아가기">← 서가</a>
+<a href="#top">표지</a><a href="#s3">산성비란?</a><a href="#shampoo">샴푸 비교</a><a href="#s4">머리카락</a><a href="#s5">탈모 원인</a><a href="#origin">소문의 유래</a><a href="#s6">가상 실험</a><a href="#s7">결론</a>
+</nav>
+<main>
+<header class="hero" id="top">
+<small>유사과학 검증 · 온라인 과학 잡지</small>
+<h1>산성비 맞으면<br><em>대머리</em> 된다고?</h1>
+<p>산성비가 정말 머리카락을 없앨까요? 산성도와 머리카락의 구조를 살펴보고, 이 소문이 왜 생겼는지 직접 만져 가며 따져 봐요.</p>
+<div class="spec" id="spec" aria-hidden="true"></div>
+</header>
+
+<section id="s3">
+<div class="kicker">산성비는 얼마나 산성일까?</div>
+<h2>식초를 얼마나<br>묽혀야 산성비일까?</h2>
+<p>산성비는 보통 빗물의 pH가 5.6보다 낮은 비를 말해요. 깨끗한 빗물도 공기 중 이산화탄소가 녹아 pH 5.6쯤이라서, 이 값이 기준이에요. 미국 환경보호청(EPA)은 산성비가 대체로 pH 4.2~4.4쯤이라고 설명해요.</p>
+<div class="tip"><span>🌋</span><p><b>쉽게 말하면</b> pH는 지진 규모처럼 한 칸마다 10배씩 달라지는 눈금이에요. pH 4는 pH 5보다 산성이 10배 세고, pH 3보다는 10배 약해요.</p></div>
+<div class="lab">
+<div class="row2">
+<div><div class="note">pH</div><div class="readout" id="dPh">2.4</div></div>
+<div style="text-align:right"><div class="note">식초를 물로</div><div class="readout" style="font-size:24px" id="dN">원액</div></div>
+<span class="strip" id="dStrip" style="width:44px;height:44px" aria-label="이 pH의 색"></span>
+</div>
+<input id="dRange" type="range" min="0" max="6.5" step="0.01" value="0" aria-label="식초를 묽히는 정도">
+<div class="bw"><div class="bar" id="dGrad"></div><div class="band" id="dBand"></div><div class="pin" id="dPin"></div></div>
+<div class="scale"><span>0 산성</span><span>7 중성</span><span>14 염기성</span></div>
+<div class="btns" id="dBtns">
+<button class="btn" data-p="vin">식초 원액</button>
+<button class="btn" data-p="4.3">산성비 pH 4.3</button>
+<button class="btn" data-p="4.7">1980년대 서울 pH 4.7</button>
+<button class="btn" data-p="5.9">최근 서울 pH 5.9</button>
+</div>
+<div class="msg" id="dMsg" aria-live="polite"></div>
+<p class="note" style="margin:10px 0 0">식초는 아세트산 약 5%로 계산한 값이에요. 박스로 표시한 곳은 두피가 편안한 약산성(pH 4.5~5.5 안팎)이에요. 실제 빗물에는 식초가 아니라 황산·질산이 녹아 있어서, 같은 pH라는 뜻일 뿐 같은 물질은 아니에요.</p>
+</div>
+<div class="tip"><span>🧃</span><p><b>쉽게 말하면</b> 진한 주스에 물을 계속 섞으면 맛이 점점 옅어지다가 어느 순간 물처럼 느껴져요. 식초도 그렇게 묽히면 산성비 정도의 산성이 돼요.</p></div>
+<h3 class="serif" style="font-size:22px;margin:34px 0 4px">한국 빗물의 산성도는 달라졌어요</h3>
+<p class="note">서울·수도권 빗물 평균 pH. 막대는 pH 0이 아니라 4부터 보여 줘서 차이가 잘 보이게 했어요. 환경부 자료를 인용한 칼럼에 나온 값이에요.</p>
+<div class="bchart" id="kchart" role="img" aria-label="서울 빗물 평균 pH: 1980년대 4.7, 최근 5.8에서 6.0">
+<div class="col"><div class="bbar" data-v="4.7"></div><small>1980년대<br>pH 4.7</small></div>
+<div class="col"><div class="bbar" data-v="5.9"></div><small>최근<br>pH 5.8~6.0</small></div>
+</div>
+<div class="callout">1980년대에 비해 최근 서울 빗물은 pH가 올라가 산성이 약해졌어요. 그래도 소문은 사라지지 않았어요.</div>
+</section>
+
+<section id="shampoo">
+<div class="kicker">샴푸랑 비교해 봐요</div>
+<h2>매일 쓰는 샴푸와<br>산성비, 누가 더 산성일까?</h2>
+<p>산성비 때문에 머리가 빠진다면, 매일 머리에 바르는 샴푸는 어떨까요? 같은 pH 눈금에 올려 놓고 비교해 봐요. 샴푸는 제품마다 pH가 달라서, 여기서는 우리가 물에 희석한 샴푸를 pH 시험지로 읽은 값(약 6)을 썼어요.</p>
+<div class="lab">
+<div id="shRows"></div>
+<div class="cmp">
+<label>비교 A<select class="sel" id="cmpA"></select></label>
+<label>비교 B<select class="sel" id="cmpB"></select></label>
+</div>
+<div class="msg" id="cmpMsg" aria-live="polite"></div>
+<p class="note" style="margin:10px 0 0">박스로 표시한 곳은 두피가 편안한 약산성(pH 4.5~5.5 안팎)이에요. 수소 이온 농도는 pH 한 칸마다 10배씩 차이 나요.</p>
+</div>
+<div class="callout"><b>비교 결과</b> 산성비(pH 4.3)는 희석한 샴푸(pH 6)보다 산성이 더 세지만 두피의 pH 범위와는 가까워요. 최근 서울 빗물(pH 5.9)은 희석한 샴푸와 거의 같은 수준이에요.</div>
+<div class="vs">
+<div><h3>🧴 샴푸</h3>거품을 내서 문지르고 1~2분 이상 두피에 닿아 있어요.</div>
+<div><h3>🌧️ 빗물</h3>잠깐 맞고 마르거나 씻겨 나가요.</div>
+</div>
+<div class="tip"><span>⚖️</span><p><b>쉽게 말하면</b> 같은 pH라도 얼마나 오래, 얼마나 문지르며 닿는지가 달라요. 그래서 pH 숫자 하나로 머리에 주는 영향을 다 비교할 수는 없고, 샴푸 pH가 산성비보다 낮다고 단정하는 자료도 출처가 불분명하면 믿기 어려워요.</p></div>
+</section>
+
+<section id="s4">
+<div class="kicker">머리카락 겉면은 어떻게 반응할까?</div>
+<h2>비늘이 열릴까,<br>닫힐까?</h2>
+<p>머리카락 바깥은 물고기 비늘처럼 겹친 큐티클로 덮여 있어요. 용액의 pH를 바꿔 보며 비늘 모습을 확인하세요. 이해를 돕는 모식도예요.</p>
+<div class="lab">
+<div class="svgbox"><svg id="hairSvg" viewBox="0 0 600 200" role="img" aria-label="머리카락 옆면 모식도"></svg></div>
+<div class="row2" style="margin-top:12px"><div><span class="note">용액 pH</span> <span class="readout" style="font-size:28px" id="hPh">5.6</span></div><span class="note" id="hState"></span></div>
+<input id="hRange" type="range" min="1" max="13" step="0.1" value="5.6" aria-label="용액의 pH">
+<div class="bw"><div class="bar" id="hGrad"></div><div class="band" id="hBand"></div><div class="pin" id="hPin"></div></div>
+<div class="scale"><span>1</span><span>7</span><span>14</span></div>
+<div class="btns" id="hBtns"></div>
+<div class="msg" id="hMsg" aria-live="polite"></div>
+</div>
+<div class="callout">이 그림은 머리카락 <b>겉면</b>의 이야기예요. 머리카락이 빠지는 문제와는 다른 이야기라서, 다음 코너에서 구별해 봐요.</div>
+</section>
+
+<section id="s5">
+<div class="kicker">탈모는 어디서 시작될까?</div>
+<h2>빗물이 닿는 곳,<br>머리가 빠지는 곳</h2>
+<p>부위를 눌러 보세요. 빗물이 닿는 곳과 탈모가 시작되는 곳이 얼마나 떨어져 있는지 보여요.</p>
+<div class="lab">
+<div class="svgbox"><svg id="skinSvg" viewBox="0 0 360 300" role="img" aria-label="두피와 모낭 단면도"></svg></div>
+<div class="btns" id="skinBtns"></div>
+<div class="msg" id="skinMsg" aria-live="polite">부위를 눌러 보세요.</div>
+</div>
+<div class="vs">
+<div><h3>🌧️ 빗물이 닿는 곳</h3>머리카락(모간)과 두피 표면이에요.</div>
+<div><h3>🌱 탈모가 시작되는 곳</h3>피부 속 모낭과 모유두예요.</div>
+</div>
+<div class="cards">
+<div><b>🧬</b>유전과 남성호르몬<br><small>가장 흔한 안드로겐성 탈모</small></div>
+<div><b>😰</b>큰 스트레스·병·급격한 체중 감소<br><small>휴지기 탈모</small></div>
+<div><b>🛡️</b>면역 이상<br><small>원형탈모</small></div>
+<div><b>🍚</b>영양 부족·일부 약물<br><small>머리를 세게 당기는 습관도</small></div>
+</div>
+<div class="tip"><span>🏠</span><p><b>쉽게 말하면</b> 지붕에 비가 내려도 지하실에서 자라는 식물이 바로 시드는 건 아니에요. 머리카락은 피부 속에서 만들어지고, 빗물은 지붕에 해당하는 표면에 닿아요.</p></div>
+<div class="callout"><b>남는 의문</b> 서울대병원 피부과 교수는 미세먼지가 많은 날의 빗물이 모낭 염증과 관련될 수 있다고 설명해요. 이 경우 문제는 산성이 아니라 <b>미세먼지</b>일 수 있고, 귀가 후 바로 머리를 감는 것이 좋아요. 또 한 칼럼은 산성비가 탈모의 직접 원인이라는 검증은 없고, 있어도 보조 요인으로 본다고 말해요.</div>
+</section>
+
+<section id="origin">
+<div class="kicker">유사과학은 어떻게 생겨났을까?</div>
+<h2>진짜 문제가<br>괴담이 되기까지</h2>
+<p class="note">웹 자료를 찾아 확인한 내용이고 출처는 맨 아래에 있어요. “대머리 소문”이 처음 어디서 나왔는지 정확한 첫 출처는 찾지 못했어요. 아래는 확인된 사실과 여러 자료의 설명을 이은 흐름이에요.</p>
+<div class="tl">
+<div><b>1852 ~ 1872</b>화학자 로버트 앵거스 스미스가 영국 북부 도시의 대기 오염을 연구하다 훗날 산성비라 불린 현상을 발견했어요. 석탄을 태울 때 나오는 황이 원인이었고, 1872년 『Air and Rain』으로 발표했어요.</div>
+<div><b>1981</b>독일 주간지 《슈피겔》이 숲이 죽어 간다는 3부작을 실었어요. 황 오염과 산성비가 숲과 건물, 사람의 호흡기까지 해친다고 경고했고, 서독 빗물이 평균 pH 4.1이라고 보도했어요. 걱정은 진짜 측정에서 출발했지만 표현은 “시한폭탄”처럼 강했어요.</div>
+<div><b>1980년대 한국</b>서울·수도권 빗물이 평균 pH 4.7 수준이었어요. 한 칼럼에 따르면 언론이 산성비를 “흑비”라 부르며 공포를 키웠고, 탈모 보도가 이어지면서 “산성비는 탈모”라는 연상이 굳어졌어요.</div>
+<div><b>1990년대</b>한 기사는 환경 문제의 심각성을 알리는 과정에서 이 이야기가 퍼졌고, 전문가들은 괴담에 가깝다고 본다고 전해요.</div>
+<div><b>지금</b>서울 빗물은 pH 5.8~6.0 수준까지 올라왔다고 해요. 그런데도 “산성비는 대머리”는 여전히 널리 알려진 말이에요.</div>
+</div>
+<h3 class="serif" style="font-size:22px;margin:34px 0 10px">소문이 굳어지는 5단계</h3>
+<div class="steps"><span>🌲<br>진짜 문제<br>(숲·호수 피해)</span><span>🖤<br>무서운 이름<br>(흑비)</span><span>💇<br>몸에 연결<br>(눈에 띄는 머리)</span><span>🧺<br>맞는 사례만<br>기억</span><span>🏛️<br>상식처럼 굳음</span></div>
+<div class="callout"><b>진짜와 가짜가 섞였어요</b> 산성비는 실제로 숲, 호수, 건물을 상하게 하는 환경 문제예요(미국 EPA도 이 피해를 설명해요). 그런데 “사람 머리카락이 빠진다”는 부분은 이 사실과 별개로 붙은 이야기예요.</div>
+<h3 class="serif" style="font-size:22px;margin:34px 0 10px">왜 믿게 될까?</h3>
+<div class="cards">
+<div><b>🔍</b>맞는 사례만 기억해요<br><small>확증 편향</small></div>
+<div><b>🔬</b>진짜 과학과 섞여요<br><small>산성비 피해는 실제로 있어요</small></div>
+<div><b>👀</b>눈에 띄는 증상이에요<br><small>머리카락은 빠지면 바로 보여요</small></div>
+<div><b>📺</b>반복해서 들려요<br><small>자주 들으면 사실처럼 느껴져요</small></div>
+</div>
+<div class="lab">
+<strong>기억에 남는 사례의 함정</strong>
+<p class="note">가상의 12일이에요. ☔는 비 맞은 날, 😟는 머리카락이 많이 빠진 것 같은 날이에요.</p>
+<div class="choices"><button id="biasA" aria-pressed="true">기억에 남는 날만</button><button id="biasB" aria-pressed="false">전체 날 보기</button></div>
+<div class="bgrid" id="bgrid"></div>
+<p id="biasMsg"></p>
+</div>
+<div class="lab">
+<strong>🔍 골라 보면 증거처럼 보여요</strong>
+<p class="note" style="margin:4px 0 12px">비 맞은 10일과 안 맞은 10일의 가상 “빠진 머리카락 수”예요. 수치는 설명용으로 임의로 정했어요.</p>
+<div class="note">☔ 비 맞은 날</div><div class="row" id="rowA"></div>
+<div class="note">☀️ 안 맞은 날</div><div class="row ctl" id="rowB"></div>
+<p id="pickMsg" style="margin:10px 0 0"></p>
+<button class="go" id="pickBtn" type="button"></button>
+</div>
+<div class="tip"><span>👣</span><p><b>쉽게 말하면</b> 머리카락은 비 오는 날이 아니어도 매일 빠져요. 보통 하루 50~100개쯤 빠진다고 알려져 있어요. 비 맞은 날 빠진 것만 눈에 들어오면 비 탓처럼 느껴져요.</p></div>
+</section>
+
+<section id="s6">
+<div class="kicker">직접 해보는 가상 실험</div>
+<h2>가상 머리카락<br>실험실</h2>
+<p>머리카락 가닥을 네 가지 용액에 담갔다고 가정해요. 결과 상황을 고르면 어떻게 해석하는지 알려 줘요.</p>
+<div class="tip"><span>🎲</span><p><b>쉽게 말하면</b> 주사위를 한 번 던져 6이 나왔다고 “6만 나오는 주사위”라고 할 순 없어요. 그래서 반복해서 확인해요.</p></div>
+<div class="lab">
+<div class="choices" id="cases">
+<button data-k="strong" aria-pressed="false">진한 산만 거칠어짐</button>
+<button data-k="acid" aria-pressed="true">산성 용액 둘 다 거칠어짐</button>
+<button data-k="equal" aria-pressed="false">모두 비슷함</button>
+<button data-k="random" aria-pressed="false">조금씩 다름</button>
+</div>
+<div class="plants" id="plants"></div>
+<p id="interp"></p>
+<p class="note">⚠️ 겉면 거칠기 점수(0~10)는 설명을 위해 임의로 정한 가상 수치예요. 실제 측정값이 아니에요. 가닥을 담가 보는 실험은 겉면 변화를 보는 것이고, 머리가 빠지는 것(탈모)을 직접 보는 실험은 아니에요.</p>
+</div>
+<div class="lab">
+<strong>변인 통제 체크리스트</strong>
+<p class="note">같게 맞춘 조건에 체크해 보세요.</p>
+<div class="chk" id="chk">
+<label><input type="checkbox"> 같은 사람의 머리카락</label>
+<label><input type="checkbox"> 담그는 시간과 온도</label>
+<label><input type="checkbox"> 물만 담근 대조군</label>
+<label><input type="checkbox"> 용액의 양과 농도</label>
+</div>
+<div id="ctrlMsg">체크가 하나도 없어요.</div>
+</div>
+</section>
+
+<section id="s7" class="concl">
+<div class="kicker">우리가 내릴 수 있는 결론</div>
+<h2>산성비 소문은<br>어디까지 사실일까?</h2>
+<p>산성비는 실제로 있고 환경에 해를 줘요. 하지만 빗물의 pH가 낮다는 사실만으로 “산성비를 맞으면 대머리가 된다”를 말할 수는 없어요. 탈모는 대개 피부 속 모낭에서 시작되는데, 빗물은 머리카락과 두피 표면에 닿기 때문이에요.</p>
+</section>
+
+<footer>
+<p>산성비 탈모 속설 검증. 건강이나 탈모가 걱정되면 피부과 전문의와 상담하세요.</p>
+<p>출처<br>
+<a href="https://www.epa.gov/acidrain/what-acid-rain">epa.gov/acidrain/what-acid-rain</a> (산성비 정의와 pH, 환경 피해)<br>
+<a href="https://www.mt.co.kr/thebio/2023/04/05/2023040515135653302">mt.co.kr/thebio/2023/04/05/2023040515135653302</a> (산성비 탈모 속설, 한국 빗물 pH, 전문가 설명)<br>
+<a href="https://www.mt.co.kr/opinion/2025/06/20/2025061821374281019">mt.co.kr/opinion/2025/06/20/2025061821374281019</a> (한국 빗물 pH 변화, 흑비와 탈모 연상)<br>
+<a href="https://v.daum.net/v/q7yV2B1yf6">v.daum.net/v/q7yV2B1yf6</a> (1990년대 확산 배경 설명)</p>
+<p>소문의 유래 부분 참고<br>
+<a href="https://en.wikipedia.org/wiki/Robert_Angus_Smith">en.wikipedia.org/wiki/Robert_Angus_Smith</a><br>
+<a href="https://germanhistory-intersections.org/en/knowledge-and-education/ghis:document-130">germanhistory-intersections.org/en/knowledge-and-education/ghis:document-130</a> (1981 《슈피겔》 숲 고사 시리즈)</p>
+</footer>
+</main>
+
+<script>
+const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
+/* 시험지 색상표(사진에서 읽은 색을 화면용으로 보정) */
+const COL={1:'#8E3A55',2:'#A8403F',3:'#C0542F',4:'#C06A2F',5:'#D8923A',6:'#E0AC2A',7:'#B3A334',8:'#7F8043',9:'#6C7637',10:'#2D3A28',11:'#2A3033',12:'#28254A',13:'#3A2A3A',14:'#34262A'};
+const rgb=h=>[1,3,5].map(i=>parseInt(h.slice(i,i+2),16));
+function phColor(p){p=Math.max(1,Math.min(14,p));const a=Math.floor(p),b=Math.min(14,a+1),t=p-a,A=rgb(COL[a]),B=rgb(COL[b]);return 'rgb('+A.map((v,i)=>Math.round(v+(B[i]-v)*t)).join(',')+')'}
+const swatches=()=>Array.from({length:14},(_,i)=>`<span style="background:${COL[i+1]}"></span>`).join('');
+const pinLeft=p=>(Math.max(0,Math.min(14,p))/14*100)+'%';
+$('#spec').innerHTML=Array.from({length:14},(_,i)=>`<span style="--i:${i};background:${COL[i+1]}">${i+1}</span>`).join('');
+
+/* 희석 계산: 약산(아세트산) 평형 + 물의 자기이온화를 이분법으로 풀어요 */
+const KA=1.74e-5,KW=1e-14,C0=0.833;
+function phOf(C){let lo=-14,hi=0;for(let i=0;i<80;i++){const mid=(lo+hi)/2,h=Math.pow(10,mid),f=h-KA*C/(KA+h)-KW/h;if(f>0)hi=mid;else lo=mid}return-(lo+hi)/2}
+const dilFor=ph=>{const h=Math.pow(10,-ph);return C0/((h-KW/h)*(KA+h)/KA)};
+const fmtN=n=>n<1.05?'원액':n<1000?Math.round(n).toLocaleString()+'배':n<1e4?(Math.round(n/10)*10).toLocaleString()+'배':(()=>{const v=n/1e4;return (v>=100?Math.round(v).toLocaleString():v.toFixed(1).replace(/\.0$/,''))+'만 배'})();
+$('#dGrad').innerHTML=swatches();$('#hGrad').innerHTML=swatches();
+[$('#dBand'),$('#hBand')].forEach(b=>{b.style.left=(4.5/14*100)+'%';b.style.width=(1/14*100)+'%'});
+const h0=Math.pow(10,-phOf(C0));
+function updDil(){
+  const lg=+$('#dRange').value,N=Math.pow(10,lg),ph=phOf(C0/N),h=Math.pow(10,-ph);
+  $('#dPh').textContent=ph.toFixed(1);$('#dN').textContent=fmtN(N);$('#dStrip').style.background=phColor(ph);$('#dPin').style.left=pinLeft(ph);
+  let m;
+  if(N<1.05)m='식초 원액은 pH 2.4쯤이에요. pH 눈금에서 붉은 쪽 끝에 가까워요.';
+  else{m=`수소 이온 농도는 원액의 약 1/${Math.max(1,Math.round(h0/h)).toLocaleString()}로 줄었어요. `;
+    m+=ph>=4.0&&ph<=4.6?'산성비와 비슷한 pH예요.':ph>4.6&&ph<5.5?'두피 pH 범위와 겹쳐요.':ph>=5.5?'거의 중성에 가까워졌어요.':'아직 꽤 진한 산성이에요.'}
+  $('#dMsg').textContent=m}
+$('#dRange').oninput=updDil;
+$$('#dBtns button').forEach(b=>b.onclick=()=>{const p=b.dataset.p;$('#dRange').value=p==='vin'?0:Math.min(6.5,Math.log10(dilFor(+p)));updDil()});
+updDil();
+
+/* 한국 빗물 pH 막대(4부터 시작) */
+const bars=$$('.bbar'),fill=()=>bars.forEach(b=>b.style.height=((b.dataset.v-4)/2.2*100)+'%');
+if('IntersectionObserver' in window){new IntersectionObserver((e,o)=>{if(e[0].isIntersecting){fill();o.disconnect()}},{threshold:.4}).observe($('#kchart'))}else fill();
+
+/* 큐티클 */
+function drawHair(ph){
+  const ang=ph>5.5?Math.min(32,(ph-5.5)*7.5):0,r=ang*Math.PI/180,len=62;
+  let s=`<rect x="10" y="78" width="580" height="44" rx="4" fill="${ph<2.5?'#8A5B4B':'#8B6B4E'}"/><rect x="10" y="88" width="580" height="24" fill="#6F5239" opacity=".55"/>`;
+  for(let i=0;i<12;i++){const x=20+i*48,tx=x+len*Math.cos(r);
+    s+=`<line x1="${x}" y1="78" x2="${tx.toFixed(1)}" y2="${(78-len*Math.sin(r)-1).toFixed(1)}" stroke="#C9A77C" stroke-width="7" stroke-linecap="round"/>`;
+    s+=`<line x1="${x}" y1="122" x2="${tx.toFixed(1)}" y2="${(122+len*Math.sin(r)+1).toFixed(1)}" stroke="#C9A77C" stroke-width="7" stroke-linecap="round"/>`}
+  s+=`<text x="14" y="20" class="t-mut" font-size="13">큐티클(겉 비늘)</text><text x="14" y="188" class="t-mut" font-size="13">코르텍스(머리카락 속)</text><text x="590" y="20" text-anchor="end" class="t-ink" font-size="13">비늘 각도 ${Math.round(ang)}°</text>`;
+  $('#hairSvg').innerHTML=s}
+function hairMsg(p){
+  if(p<2.5)return['강산','이 정도로 강한 산성에서는 머리카락 단백질이 상할 수 있어요. 빗물은 여기까지 내려가지 않아요.'];
+  if(p<4.5)return['산성','비늘이 닫혀 있어요. 산성비 정도의 산성도에서 머리카락 겉면은 눈에 띄게 변하지 않는 쪽이에요.'];
+  if(p<=5.5)return['약산성','머리카락과 두피가 가장 편안한 범위예요. 비늘이 가지런히 닫혀 있어요.'];
+  if(p<7.5)return['중성 근처','비늘이 닫힌 상태에 가까워요.'];
+  return['알칼리성','비늘이 들떠요. 비누나 염색약 같은 알칼리성 제품이 머리결을 거칠게 만들 수 있는 이유예요.']}
+const presets=[['산성비 4.3',4.3],['보통 빗물 5.6',5.6],['비누 10',10],['식초 원액 2.4',2.4]];
+$('#hBtns').innerHTML=presets.map(p=>`<button class="btn" type="button" data-v="${p[1]}">${p[0]}</button>`).join('');
+function updHair(){const p=+$('#hRange').value,r=hairMsg(p);$('#hPh').textContent=p.toFixed(1);$('#hState').textContent=r[0];$('#hMsg').textContent=r[1];$('#hPin').style.left=pinLeft(p);drawHair(p)}
+$('#hRange').oninput=updHair;$$('#hBtns button').forEach(b=>b.onclick=()=>{$('#hRange').value=b.dataset.v;updHair()});updHair();
+
+/* 단면도 */
+const PARTS=[
+{k:'shaft',n:'모간',t:'피부 밖으로 나온 머리카락이에요. 죽은 세포로 된 케라틴 덩어리라 신경도 혈관도 없어요. 빗물이 닿는 곳은 거의 여기예요. 겉이 거칠어질 수는 있어도 새 머리카락을 만드는 곳은 아니에요.'},
+{k:'skin',n:'표피',t:'피부 맨 바깥층이에요. 약산성 막이 세균과 자극을 막아 줘요. 빗물은 이 층의 표면에 닿아요.'},
+{k:'gland',n:'피지선',t:'기름(피지)을 내보내 머리카락과 두피를 코팅해 줘요. 이 기름막이 있어서 물이 바로 스며들지 않아요.'},
+{k:'follicle',n:'모낭',t:'머리카락이 자라나는 주머니예요. 유전과 남성호르몬의 영향으로 모낭이 점점 작아지면 가늘고 짧은 머리카락만 나와요. 가장 흔한 탈모(안드로겐성 탈모)예요.'},
+{k:'papilla',n:'모유두',t:'혈관에서 영양을 받아 머리카락 세포를 만들라고 신호를 보내는 곳이에요. 스트레스, 심한 병, 영양 부족이 여기와 주변 환경에 영향을 줄 수 있어요.'}];
+(function(){
+  let s='<rect x="0" y="152" width="360" height="148" fill="#D9A58A" opacity=".85"/>';
+  s+='<g class="part" data-k="skin"><rect x="0" y="130" width="360" height="22" fill="#E8C9A8" stroke="#B88A6A"/><text x="8" y="146" font-size="11" fill="#5A3A28">표피</text></g>';
+  s+='<g class="part" data-k="shaft"><path d="M172 18 L188 18 L190 132 L170 132 Z" fill="#5B4636"/><path d="M174 18 L180 18 L181 132 L173 132 Z" fill="#7A604A" opacity=".6"/></g>';
+  s+='<g class="part" data-k="follicle"><path d="M166 132 L194 132 L196 232 Q180 262 164 232 Z" fill="#F0DAC4" stroke="#B88A6A" stroke-width="2"/><path d="M172 132 L188 132 L189 228 Q180 242 171 228 Z" fill="#5B4636"/></g>';
+  s+='<g class="part" data-k="gland"><ellipse cx="236" cy="178" rx="30" ry="16" fill="#F3D77A" stroke="#C6A53A" stroke-width="2"/><path d="M208 176 L196 164" stroke="#C6A53A" stroke-width="3"/></g>';
+  s+='<g class="part" data-k="papilla"><circle cx="180" cy="250" r="14" fill="#C9514E" stroke="#8E2F2D" stroke-width="2"/><path d="M150 285 Q165 262 172 262 M210 285 Q195 262 188 262" stroke="#C9514E" stroke-width="3" fill="none"/></g>';
+  s+='<line x1="0" y1="130" x2="360" y2="130" stroke-dasharray="5 4" style="stroke:var(--ink)" opacity=".6"/>';
+  [[30,10],[70,34],[110,6],[270,16],[310,38],[330,6]].forEach(d=>{s+=`<path d="M${d[0]} ${d[1]} q-6 10 0 14 q6 -4 0 -14z" fill="#4A8FD6"/>`});
+  s+='<text x="12" y="70" class="t-ink" font-size="13" font-weight="700">빗물이 닿는 곳</text><text x="214" y="288" class="t-ink" font-size="13" font-weight="700">탈모가 시작되는 곳</text><text x="258" y="124" class="t-mut" font-size="11">피부 표면</text>';
+  $('#skinSvg').innerHTML=s;
+  $('#skinBtns').innerHTML=PARTS.map(p=>`<button class="btn" type="button" data-k="${p.k}" aria-pressed="false">${p.n}</button>`).join('')})();
+function selPart(k){const p=PARTS.find(x=>x.k===k);$('#skinMsg').textContent=p.n+': '+p.t;$('#skinSvg').classList.add('dim');$$('#skinSvg .part').forEach(g=>g.classList.toggle('sel',g.dataset.k===k));$$('#skinBtns button').forEach(b=>b.setAttribute('aria-pressed',b.dataset.k===k))}
+$$('#skinBtns button').forEach(b=>b.onclick=()=>selPart(b.dataset.k));
+$$('#skinSvg .part').forEach(g=>g.onclick=()=>selPart(g.dataset.k));
+
+/* 기억에 남는 사례 */
+const items=[[1,1],[1,1],[1,1],[1,0],[1,0],[1,0],[0,1],[0,1],[0,1],[0,0],[0,0],[0,0]];
+function setBias(mem){$('#biasA').setAttribute('aria-pressed',mem);$('#biasB').setAttribute('aria-pressed',!mem);
+  $('#bgrid').innerHTML=items.map(([rain,loss])=>`<div class="${mem&&!(rain&&loss)?'dim':''}">${loss?'😟':'🙂'}${rain?'<i>☔</i>':''}</div>`).join('');
+  $('#biasMsg').textContent=mem?'비 맞고 머리가 많이 빠진 3일만 눈에 띄면 “역시 산성비 때문이야!” 싶어요.':'전체로 보면 비 맞은 6일 중 3일, 안 맞은 6일 중 3일에 많이 빠졌어요. 차이가 없어요. (가상 사례)'}
+$('#biasA').onclick=()=>setBias(true);$('#biasB').onclick=()=>setBias(false);setBias(true);
+const pv=[5,7,4,9,6,5,8,4,6,10],cv=[6,5,7,6,8,5,6,7,4,9];let ch=false;
+function drawPick(){$('#rowA').innerHTML=pv.map(v=>`<i class="${ch&&v<7?'off':''}" style="height:${v*10}%"></i>`).join('');$('#rowB').innerHTML=cv.map(v=>`<i style="height:${v*10}%"></i>`).join('');
+  $('#pickMsg').textContent=ch?'와, 비 맞은 날 훨씬 많이 빠져 보여요! 하지만 많이 빠진 4일만 골라 보여준 결과예요.':'전체를 보면 평균이 6.4 대 6.3으로 거의 같아요.';
+  $('#pickBtn').textContent=ch?'전체 다시 보기':'많이 빠진 날만 골라 보기'}
+$('#pickBtn').onclick=()=>{ch=!ch;drawPick()};drawPick();
+
+/* 가상 실험 */
+const cases={
+ strong:{v:[6,1,1,1],t:'아주 진한 산에서만 거칠어졌다면 강한 산은 머리카락 겉면을 상하게 할 수 있다는 뜻이에요. 하지만 빗물 정도로 묽힌 용액에서 차이가 없다면 산성비의 근거는 되지 못해요.'},
+ acid:{v:[5,4,1,1],t:'산성 용액에서 겉면이 거칠어졌어도, 머리가 빠지는 것과는 다른 문제예요. 겉면 손상이 탈모로 이어지는지는 따로 확인해야 하고, 반복 실험이 필요해요.'},
+ equal:{v:[1,1,1,1],t:'모든 용액이 비슷하다면 이 조건에서는 용액에 따른 차이를 확인하지 못한 거예요.'},
+ random:{v:[2.2,1.6,2.5,2],t:'조금씩 차이가 난다고 모두 용액 때문은 아니에요. 가닥마다 원래 다른 점도 있으니 여러 가닥을 반복해서 비교해야 해요.'}};
+const labels=['진한 산 (pH 2)','산성비 정도 (pH 4.3)','중성에 가까움 (pH 6)','물(대조군)'];
+function setCase(k){$$('#cases button').forEach(b=>b.setAttribute('aria-pressed',b.dataset.k===k));
+  $('#plants').innerHTML=cases[k].v.map((v,i)=>`<div class="plant"><span class="e">〰️</span><strong>${labels[i]}</strong><div class="meter"><i style="width:${v/10*100}%"></i></div><small>거칠기 ${v.toFixed(1)}</small></div>`).join('');
+  $('#interp').textContent=cases[k].t}
+$$('#cases button').forEach(b=>b.onclick=()=>setCase(b.dataset.k));setCase('acid');
+$$('#chk input').forEach(c=>c.onchange=()=>{const n=$$('#chk input:checked').length;$('#ctrlMsg').textContent=n===4?'모두 통제했어요. 용액의 영향만 비교하기 좋아요.':n===0?'체크가 하나도 없어요.':`${4-n}개 조건이 달라요. 결과가 용액 때문인지 알기 어려워요.`});
+
+
+/* 샴푸 비교 */
+const SHI=[
+ {n:'산성비',p:4.3,d:'미국 EPA 기준 pH 4.2~4.4'},
+ {n:'1980년대 서울 빗물',p:4.7,d:'환경부 자료를 인용한 칼럼 기준'},
+ {n:'두피',p:5.0,d:'약 pH 4.5~5.5',band:true},
+ {n:'최근 서울 빗물',p:5.9,d:'pH 5.8~6.0 수준'},
+ {n:'샴푸 희석액',p:6.0,d:'우리가 시험지로 읽은 값'}];
+$('#shRows').innerHTML=SHI.map(o=>`<div class="shrow"><div class="note"><b>${o.n}</b> pH ${o.band?'4.5~5.5':o.p.toFixed(1)} · ${o.d}</div><div class="bw"><div class="bar">${swatches()}</div>${o.band?`<div class="band" style="left:${4.5/14*100}%;width:${1/14*100}%"></div>`:`<div class="pin" style="left:${pinLeft(o.p)}"></div>`}</div></div>`).join('')+'<div class="scale"><span>0 산성</span><span>7 중성</span><span>14 염기성</span></div>';
+const opts=SHI.map((o,i)=>`<option value="${i}">${o.n}</option>`).join('');
+$('#cmpA').innerHTML=opts;$('#cmpB').innerHTML=opts;$('#cmpA').value=0;$('#cmpB').value=4;
+function updCmp(){const a=SHI[+$('#cmpA').value],b=SHI[+$('#cmpB').value],d=b.p-a.p,m=$('#cmpMsg');
+  if(a===b){m.textContent='같은 항목이에요. 다른 항목을 골라 보세요.';return}
+  const r=Math.pow(10,Math.abs(d)),f=r>=10?Math.round(r):r.toFixed(1).replace(/\.0$/,'');
+  m.textContent=Math.abs(d)<0.15?`${a.n}와 ${b.n}은 pH가 거의 같아요.`:d>0?`${a.n}은 ${b.n}보다 수소 이온이 약 ${f}배 많아서 더 산성이에요.`:`${b.n}은 ${a.n}보다 수소 이온이 약 ${f}배 많아서 더 산성이에요.`}
+$('#cmpA').onchange=updCmp;$('#cmpB').onchange=updCmp;updCmp();
+
+</script>
+</body>
+</html>
