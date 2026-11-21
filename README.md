@@ -46,3 +46,4 @@
 ## 이번 최종 추가 기사
 
 - 지구 곡률 기사는 `worlds/earth-curvature/index.html`에 독립적으로 배치했습니다. 기사 내부의 `../../index.html` 링크는 이 폴더 구조에서 최상위 서가로 돌아갑니다.
+GitHub Pages deployment refresh
