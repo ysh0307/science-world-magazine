@@ -1,0 +1,35 @@
+{
+  "project": "SCIENCE WORLD",
+  "magazines": [
+    {
+      "id": "cactus",
+      "title": "선인장은 전자파를 먹을까?",
+      "path": "worlds/cactus/index.html"
+    },
+    {
+      "id": "plant-voice",
+      "title": "식물은 칭찬을 알아들을까?",
+      "path": "worlds/plant-voice/index.html"
+    },
+    {
+      "id": "acid-rain",
+      "title": "산성비 맞으면 대머리 될까?",
+      "path": "worlds/acid-rain/index.html"
+    },
+    {
+      "id": "glass",
+      "title": "유리의 구조와 새로운 활용",
+      "path": "worlds/glass/index.html",
+      "parts": [
+        "worlds/glass/part-01/index.html",
+        "worlds/glass/part-02/index.html"
+      ]
+    },
+    {
+      "id": "earth-curvature",
+      "title": "산에 올라가면 지구가 둥근 게 보일까?",
+      "category": "EARTH SCIENCE",
+      "path": "worlds/earth-curvature/index.html"
+    }
+  ]
+}

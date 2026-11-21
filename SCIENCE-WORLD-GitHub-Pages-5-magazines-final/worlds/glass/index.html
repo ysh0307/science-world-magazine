@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#193b4a">
+<title>유리의 구조와 새로운 활용 | SCIENCE WORLD</title>
+<style>
+:root{color-scheme:light;--ink:#172b36;--muted:#657783;--paper:#f3f6f7;--blue:#245c78;--orange:#d96b43;--line:#d8e1e6}
+*{box-sizing:border-box}html,body{margin:0;min-height:100%;font-family:system-ui,-apple-system,"Noto Sans KR",sans-serif;color:var(--ink);background:var(--paper)}
+.top{background:linear-gradient(125deg,#102c40,#286b91 68%,#d95d35);color:#fff;padding:20px clamp(16px,4vw,42px) 18px}
+.top-inner{max-width:1100px;margin:auto}.eyebrow{font-size:11px;letter-spacing:.16em;font-weight:800;color:#d5e8ef}.top h1{font-size:clamp(25px,4vw,38px);line-height:1.2;margin:7px 0 8px}.top p{margin:0;color:#e2edf2;font-size:14px;line-height:1.7;max-width:800px}
+.controls{max-width:1100px;margin:14px auto 0;display:flex;gap:8px;flex-wrap:wrap;align-items:center}.tab,.back{border:1px solid #ffffff75;border-radius:999px;background:#ffffff14;color:white;padding:10px 15px;font:inherit;font-size:13px;font-weight:600;line-height:1.2;cursor:pointer;min-height:42px}.tab[aria-pressed="true"]{background:#fff;color:#183d53;border-color:white}.back{margin-left:auto;background:#e6bd86;color:#24352e;border-color:#e6bd86}
+.description{max-width:1100px;margin:12px auto 0;padding:0 18px 12px;color:var(--muted);font-size:12px;line-height:1.6}
+.viewer{width:100%;height:calc(100vh - 190px);height:calc(100dvh - 190px);min-height:470px;border:0;display:block;background:white}
+@media(max-width:600px){.top{padding-top:16px}.controls{gap:6px}.tab{flex:1;padding:9px 10px}.back{margin-left:0}.viewer{height:calc(100vh - 215px);height:calc(100dvh - 215px);min-height:420px}.description{padding-bottom:8px}}
+</style>
+</head>
+<body>
+<header class="top"><div class="top-inner">
+  <div class="eyebrow">SCIENCE WORLD · MATERIALS COLLECTION</div>
+  <h1>유리의 구조와 새로운 활용</h1>
+  <p>유리의 입자 배열과 온도에 따른 변화부터, 비결정성 재료가 광학 소재와 새로운 안경 설계에 연결되는 가능성까지 두 편의 탐구 기사를 한 권으로 묶었어요.</p>
+  <div class="controls" role="group" aria-label="유리 잡지의 기사 선택">
+    <button class="tab" type="button" data-src="./part-01/index.html" data-title="1부 · 유리의 구조와 온도 변화" aria-pressed="true">1부 · 유리의 구조와 온도 변화</button>
+    <button class="tab" type="button" data-src="./part-02/index.html" data-title="2부 · 비결정성 고체의 활용" aria-pressed="false">2부 · 비결정성 고체의 활용</button>
+    <button class="back" type="button" id="backToShelf">서가로 돌아가기 ↗</button>
+  </div>
+</div></header>
+<p class="description" id="articleDescription">1부에서는 유리의 구조와 온도 변화에 따른 연화 현상을 살펴봐요.</p>
+<iframe class="viewer" id="articleFrame" src="./part-01/index.html" title="1부 · 유리의 구조와 온도 변화"></iframe>
+<script>
+(function(){
+ const frame=document.getElementById('articleFrame');
+ const tabs=[...document.querySelectorAll('.tab')];
+ const desc=document.getElementById('articleDescription');
+ const descriptions={
+  './part-01/index.html':'1부에서는 유리의 원자 배열과 온도 변화에 따른 연화 현상을 살펴봐요.',
+  './part-02/index.html':'2부에서는 비결정성 재료의 광학적 활용 사례와 차세대 안경 설계 아이디어를 살펴봐요.'
+ };
+ tabs.forEach(function(tab){tab.addEventListener('click',function(){
+   tabs.forEach(t=>t.setAttribute('aria-pressed',String(t===tab)));
+   frame.src=tab.dataset.src;frame.title=tab.dataset.title;
+   desc.textContent=descriptions[tab.dataset.src]||'';
+ });});
+ document.getElementById('backToShelf').addEventListener('click',function(){
+   if(window.top!==window) window.top.postMessage({type:'science-world-close-reader'},'*');
+   else window.location.href='../../index.html';
+ });
+})();
+</script>
+</body></html>

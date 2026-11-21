@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SCIENCE MAGAZINE 01 | 유리의 비결정성과 온도 변화</title>
+<style>
+:root{--ink:#17202b;--muted:#657386;--paper:#f3f6f8;--line:#dce3e9;--blue:#286b91;--orange:#e65a38}
+*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font-family:system-ui,-apple-system,"Noto Sans KR",sans-serif;line-height:1.72}
+header{padding:48px 22px;color:white;background:linear-gradient(130deg,#102c40,#286b91 65%,#d95d35)}
+.wrap{max-width:960px;margin:auto}.eyebrow{font-size:.78rem;letter-spacing:.16em;font-weight:800}
+h1{font-size:clamp(2.3rem,7vw,4.7rem);line-height:1.05;margin:16px 0}.subtitle{font-size:1.1rem;color:#e6f0f5;max-width:700px}
+.meta{display:flex;gap:8px;flex-wrap:wrap;margin-top:22px}.pill{border:1px solid #ffffff75;border-radius:99px;padding:5px 12px;font-size:.8rem}
+main{max-width:960px;margin:28px auto;padding:0 18px}.lead{font-size:1.1rem;color:#344252}
+section{background:white;border:1px solid var(--line);border-radius:18px;padding:clamp(20px,4vw,34px);margin:20px 0;box-shadow:0 8px 25px #20384909}
+.kicker{color:var(--blue);font-size:.78rem;font-weight:850;letter-spacing:.13em}h2{font-size:1.65rem;line-height:1.3;margin:5px 0 14px}h3{margin:15px 0 7px}
+p{margin:9px 0}.muted{color:var(--muted);font-size:.9rem}.panel{background:#f5f8fa;border:1px solid var(--line);border-radius:14px;padding:17px}
+.callout{background:#fff1e9;border-left:4px solid var(--orange);padding:14px 17px;border-radius:0 12px 12px 0;margin:16px 0}
+button{border:1px solid #bdcbd5;background:white;color:#263c4c;padding:9px 14px;border-radius:999px;font-weight:750;cursor:pointer}
+button.active,button:hover{background:var(--blue);border-color:var(--blue);color:white}
+.controls{display:flex;flex-wrap:wrap;gap:8px}.range{width:100%;accent-color:var(--orange)}
+.readout{font-size:2rem;font-weight:850;color:var(--orange)}.bar{height:13px;background:#e5eaf0;border-radius:99px;overflow:hidden}.bar>div{height:100%;background:var(--orange);border-radius:99px;transition:width .2s}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}svg{display:block;max-width:100%;height:auto;margin:auto}
+table{border-collapse:collapse;width:100%;margin:12px 0}td,th{text-align:left;padding:10px;border-bottom:1px solid var(--line)}th{background:#f2f6f8}
+footer{max-width:960px;margin:25px auto 60px;padding:0 18px;color:var(--muted);font-size:.85rem}
+@media(max-width:650px){.grid{grid-template-columns:1fr}header{padding-top:36px}section{padding:20px}}
+@media print{header{print-color-adjust:exact}section{break-inside:avoid;box-shadow:none}button{display:none}}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+ <div class="eyebrow">SCIENCE MAGAZINE · MATERIAL SCIENCE · ISSUE 01</div>
+ <h1>GLASS<br>IN MOTION</h1>
+ <div class="subtitle">유리는 온도에 따라 어떻게 변할까?<br>비결정성 고체의 구조와 점성도, 그리고 연화 현상</div>
+ <div class="meta"><span class="pill">탐구 기사 01</span><span class="pill">비결정성 고체</span><span class="pill">온도와 점성도</span><span class="pill">인터랙티브 실험</span></div>
+</div></header>
+<main>
+<p class="lead">유리는 고체일까, 액체일까? 유리는 일상에서 단단한 고체처럼 사용되지만, 원자 배열과 온도에 따른 물성 변화를 살펴보면 일반적인 결정성 고체와 다른 특징을 발견할 수 있다.</p>
+<section>
+ <div class="kicker">01 · STRUCTURE</div><h2>유리는 왜 특별할까?</h2>
+ <p>결정성 고체는 원자들이 장거리 규칙성을 갖도록 배열되어 있다. 반면 유리는 원자 배열에 장거리 규칙성이 없는 비결정성 고체다. 이 구조적 차이는 유리가 온도에 반응하는 방식에도 영향을 준다.</p>
+ <div class="grid">
+  <div class="panel"><h3>결정성 고체</h3>
+   <svg viewBox="0 0 300 150" aria-label="규칙적인 원자 배열">
+    <rect width="300" height="150" rx="12" fill="#eaf2f6"/>
+    <g stroke="#80a6b8" stroke-width="2"><path d="M45 35H255M45 75H255M45 115H255M45 35V115M95 35V115M145 35V115M195 35V115M255 35V115"/></g>
+    <g fill="#286b91" stroke="white" stroke-width="2">{% for x in [] %}{% endfor %}
+     <circle cx="45" cy="35" r="8"/><circle cx="95" cy="35" r="8"/><circle cx="145" cy="35" r="8"/><circle cx="195" cy="35" r="8"/><circle cx="255" cy="35" r="8"/>
+     <circle cx="45" cy="75" r="8"/><circle cx="95" cy="75" r="8"/><circle cx="145" cy="75" r="8"/><circle cx="195" cy="75" r="8"/><circle cx="255" cy="75" r="8"/>
+     <circle cx="45" cy="115" r="8"/><circle cx="95" cy="115" r="8"/><circle cx="145" cy="115" r="8"/><circle cx="195" cy="115" r="8"/><circle cx="255" cy="115" r="8"/>
+    </g></svg><p class="muted">규칙적인 원자 배열</p>
+  </div>
+  <div class="panel"><h3>비결정성 고체</h3>
+   <svg viewBox="0 0 300 150" aria-label="불규칙한 원자 배열">
+    <rect width="300" height="150" rx="12" fill="#eaf2f6"/>
+    <g stroke="#80a6b8" stroke-width="2"><path d="M35 35L95 24L150 48L215 28L265 55M35 35L58 100L115 82L150 48L173 115L215 28L265 55L245 120M58 100L30 130L115 82L125 135L173 115L220 145L245 120"/></g>
+    <g fill="#286b91" stroke="white" stroke-width="2"><circle cx="35" cy="35" r="8"/><circle cx="95" cy="24" r="8"/><circle cx="150" cy="48" r="8"/><circle cx="215" cy="28" r="8"/><circle cx="265" cy="55" r="8"/><circle cx="58" cy="100" r="8"/><circle cx="115" cy="82" r="8"/><circle cx="173" cy="115" r="8"/><circle cx="245" cy="120" r="8"/><circle cx="30" cy="130" r="8"/><circle cx="125" cy="135" r="8"/><circle cx="220" cy="145" r="8"/></g>
+   </svg><p class="muted">장거리 규칙성이 없는 원자 배열</p>
+  </div>
+ </div>
+ <div class="callout"><b>핵심 개념:</b> 비결정성은 원자 배열의 규칙성에 관한 개념이다. 유리가 투명하거나 단단하다는 성질은 원자 배열 하나만으로 설명되지 않고, 화학 조성과 내부 결함 등에도 영향을 받는다.</div>
+</section>
+<section>
+ <div class="kicker">02 · INTERACTIVE HEATING</div><h2>온도를 높이면 유리는 어떻게 변할까?</h2>
+ <p>아래 온도 조절 장치를 움직여 보자. 온도가 상승하면 유리는 점차 연화되고 점성도가 감소하여 흐르기 쉬워진다. 유리는 한순간에 녹는 것이 아니라 온도 범위에 걸쳐 점진적으로 변한다.</p>
+ <div class="panel">
+  <div style="display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap"><b>GLASS HEATING SIMULATOR</b><span id="state" class="pill" style="color:#286b91;border-color:#a9c8d8">고체 상태</span></div>
+  <div style="background:#17191e;border-radius:14px;margin:12px 0;padding:12px">
+   <svg id="glassSvg" viewBox="0 0 340 205" role="img" aria-label="가열에 따라 연화되는 유리의 모식도">
+    <defs><linearGradient id="moltenGlass" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#fff0a0"/><stop offset="45%" stop-color="#ff842e"/><stop offset="100%" stop-color="#c52c16"/></linearGradient><filter id="glow"><feGaussianBlur stdDeviation="7"/></filter></defs>
+    <path d="M35 160H305M55 160L75 180M285 160L265 180" stroke="#777" stroke-width="4" fill="none"/>
+    <ellipse id="glowShape" cx="170" cy="135" rx="75" ry="12" fill="#ff6426" opacity="0" filter="url(#glow)"/>
+    <path id="glassShape" d="M90 75Q90 45 170 45Q250 45 250 75L238 133Q170 150 102 133Z" fill="#a8d9e8" fill-opacity=".85" stroke="#d8f5ff" stroke-width="3"/>
+    <path id="glassLine" d="M105 76Q170 58 235 76" stroke="white" stroke-width="3" fill="none"/>
+    <text x="170" y="198" fill="#ddd" font-size="10" text-anchor="middle">CONCEPTUAL GLASS SAMPLE</text>
+   </svg>
+   <div id="tempText" class="readout" style="text-align:center">20°C</div>
+   <div id="condition" style="text-align:center;color:#ddd;font-size:.9rem">단단한 유리 상태</div>
+  </div>
+  <label for="temp" style="font-weight:750">온도 조절</label>
+  <input class="range" id="temp" type="range" min="20" max="800" step="10" value="20">
+  <div style="display:flex;justify-content:space-between" class="muted"><span>20°C</span><span>800°C</span></div>
+  <div class="controls" style="margin-top:14px">
+   <button data-t="20" class="active">20°C</button><button data-t="300">300°C</button><button data-t="500">500°C</button><button data-t="600">600°C</button><button data-t="700">700°C</button><button data-t="800">800°C</button><button id="reset">초기화</button>
+  </div>
+  <hr style="border:0;border-top:1px solid #dce3e9;margin:18px 0">
+  <div style="display:flex;justify-content:space-between;gap:10px"><b>상대적 점성도</b><strong id="viscText" class="result">100.0%</strong></div>
+  <div class="bar"><div id="viscBar" style="width:100%"></div></div>
+  <p id="viscDescription" class="muted">점성도가 매우 높은 상태</p>
+  <p class="muted">※ 점성도 수치는 온도 변화의 방향을 보여 주는 교육용 개념값이며 실제 유리의 측정 데이터나 특정 유리 조성의 물성값이 아니다.</p>
+ </div>
+</section>
+<section>
+ <div class="kicker">03 · WHAT HAPPENS INSIDE?</div><h2>유리 내부에서는 무슨 일이 일어날까?</h2>
+ <p>온도가 상승하면 원자들의 열운동이 활발해진다. 유리의 구조가 재배열될 수 있는 정도가 커지며, 점성도가 낮아져 점차 형태가 변하기 쉬워진다.</p>
+ <svg viewBox="0 0 700 205" role="img" aria-label="온도에 따른 원자 열운동 개념도">
+  <rect x="8" y="8" width="330" height="180" rx="14" fill="#eaf2f6"/><rect x="362" y="8" width="330" height="180" rx="14" fill="#fff0e8"/>
+  <g stroke="#7298aa" stroke-width="2"><path d="M48 55L105 40L165 65L230 43L290 67M48 55L70 125L130 105L165 65L195 135L230 43L290 67M70 125L45 160L130 105L140 165L195 135L260 165L290 125"/></g>
+  <g fill="#286b91"><circle cx="48" cy="55" r="7"/><circle cx="105" cy="40" r="7"/><circle cx="165" cy="65" r="7"/><circle cx="230" cy="43" r="7"/><circle cx="290" cy="67" r="7"/><circle cx="70" cy="125" r="7"/><circle cx="130" cy="105" r="7"/><circle cx="195" cy="135" r="7"/><circle cx="290" cy="125" r="7"/></g>
+  <g stroke="#e36b3d" stroke-width="2.5" fill="none"><path d="M400 55l-9 -8m9 8l10 -6m-10 6l2 11M460 40l-9 -8m9 8l10 -6m-10 6l2 11M520 65l-9 -8m9 8l10 -6m-10 6l2 11M585 43l-9 -8m9 8l10 -6m-10 6l2 11M645 67l-9 -8m9 8l10 -6m-10 6l2 11"/></g>
+  <g fill="#d95d35"><circle cx="400" cy="55" r="7"/><circle cx="460" cy="40" r="7"/><circle cx="520" cy="65" r="7"/><circle cx="585" cy="43" r="7"/><circle cx="645" cy="67" r="7"/></g>
+  <g font-size="14" fill="#344b5a" text-anchor="middle"><text x="173" y="181">낮은 온도 · 열운동이 상대적으로 작음</text><text x="527" y="181">높은 온도 · 열운동이 활발해짐</text></g>
+ </svg>
+ <div class="callout"><b>오해 바로잡기:</b> 온도가 일정 수준을 넘으면 유리 내부의 원자 간 결합선이 한꺼번에 사라지는 것은 아니다. 유리의 연화는 결합이 일괄적으로 끊어지는 현상이 아니라 원자들의 열운동과 구조적 재배열이 활발해지며 점성도가 감소하는 현상이다.</div>
+</section>
+<section>
+ <div class="kicker">04 · GLASS TRANSITION</div><h2>유리전이: 뚜렷한 녹는점 대신 넓은 변화 구간</h2>
+ <p>결정성 고체는 일정한 압력에서 녹는점에 도달하면 고체에서 액체로 상전이가 일어난다. 일반적인 유리는 유리전이 온도 범위에서 열용량, 열팽창, 점탄성 등의 성질이 변하고 점차 연화된다. 유리전이 온도는 유리 조성과 가열 조건 등에 따라 달라질 수 있다.</p>
+ <table><thead><tr><th>구분</th><th>결정성 고체</th><th>비결정성 유리</th></tr></thead><tbody>
+ <tr><td>원자 배열</td><td>장거리 규칙성</td><td>장거리 규칙성 없음</td></tr>
+ <tr><td>가열 시 변화</td><td>녹는점에서 뚜렷한 용융</td><td>유리전이 범위를 거쳐 점진적 연화</td></tr>
+ <tr><td>점성도</td><td>용융 과정에서 급격한 변화</td><td>온도 상승에 따라 크게 감소</td></tr>
+ </tbody></table>
+</section>
+<section>
+ <div class="kicker">05 · THINK SCIENTIFICALLY</div><h2>탐구를 확장하는 질문</h2>
+ <div class="panel"><b>질문 1.</b> 같은 온도에서 모든 종류의 유리가 같은 점성도를 가질까?<p class="muted">힌트: 유리의 화학 조성과 제조 방식이 다르면 물성도 달라질 수 있다.</p></div>
+ <div class="panel" style="margin-top:10px"><b>질문 2.</b> 유리의 점성도 감소가 실제 산업에서 어떤 이점을 줄까?<p class="muted">힌트: 유리 성형, 광섬유 제조, 유리 제품 가공을 생각해 보자.</p></div>
+ <div class="panel" style="margin-top:10px"><b>질문 3.</b> 비결정성 고체의 구조적 특징을 활용해 온도 변화에 반응하는 광학 소재를 설계할 수 있을까?<p class="muted">힌트: 온도에 따른 물성 변화와 실제 렌즈의 광학적 안정성을 함께 검토해야 한다.</p></div>
+</section>
+<section>
+ <div class="kicker">06 · CONCLUSION</div><h2>미시적 구조에서 거시적 물성으로</h2>
+ <p>이번 탐구를 통해 유리의 비결정성 구조와 온도에 따른 점성도 변화를 연결해 살펴보았다. 온도 상승은 원자들의 열운동을 활발하게 하고 구조적 재배열을 쉽게 하여 유리의 점성도를 낮춘다. 이처럼 물질의 미시적 구조를 이해하는 것은 유리의 가공뿐 아니라 새로운 광학 소재와 기능성 재료를 설계하는 출발점이 될 수 있다.</p>
+ <div class="callout"><b>핵심 정리:</b> 유리는 비결정성 고체이며, 온도가 올라갈수록 점성도가 감소하고 점차 연화되어 흐르기 쉬워진다.</div>
+</section>
+</main>
+<footer>SCIENCE MAGAZINE 01 · GLASS IN MOTION<br>교육·탐구 목적의 개념 시각화. 온도별 점성도 표시와 유리 형태 그림은 실제 측정값이 아닌 설명용 모형이다.</footer>
+<script>
+const slider=document.getElementById('temp');
+const state=document.getElementById('state'),tempText=document.getElementById('tempText'),condition=document.getElementById('condition');
+const shape=document.getElementById('glassShape'),line=document.getElementById('glassLine'),glow=document.getElementById('glowShape');
+const viscText=document.getElementById('viscText'),viscBar=document.getElementById('viscBar'),viscDescription=document.getElementById('viscDescription');
+function update(t){
+ const p=(t-20)/780, melt=Math.max(0,Math.min(1,(t-450)/350)), visc=100*Math.exp(-4*p);
+ tempText.textContent=t+'°C';viscText.textContent=visc.toFixed(1)+'%';viscBar.style.width=visc+'%';
+ let label=t<450?'고체 상태':t<650?'연화 진행':'고온 연화';
+ state.textContent=label;condition.textContent=t<450?'단단한 유리 상태':t<650?'점차 연화되는 유리':'유동성이 커진 고온 유리';
+ viscDescription.textContent=t<300?'점성도가 매우 높은 상태':t<500?'점성도가 감소하기 시작하는 상태':t<700?'유동성이 점차 커지는 상태':'점성도가 상대적으로 낮은 상태';
+ const color=`rgb(${Math.round(168+87*p)},${Math.round(217-145*p)},${Math.round(232-205*p)})`;
+ if(t<450){
+  shape.setAttribute('d','M90 75Q90 45 170 45Q250 45 250 75L238 133Q170 150 102 133Z');
+  shape.setAttribute('fill','#a8d9e8');shape.setAttribute('fill-opacity','.85');
+  shape.setAttribute('stroke','#d8f5ff');line.setAttribute('d','M105 76Q170 58 235 76');glow.setAttribute('opacity','0');
+ }else{
+  shape.setAttribute('d',`M90 ${76+melt*35}Q90 ${45+melt*20} 170 ${45+melt*20}Q250 ${45+melt*20} 250 ${76+melt*35}Q245 ${115+melt*35} 220 ${130+melt*15}Q170 ${153+melt*10} 120 ${130+melt*15}Q95 ${115+melt*35} 90 ${76+melt*35}Z`);
+  shape.setAttribute('fill','url(#moltenGlass)');shape.setAttribute('fill-opacity','1');shape.setAttribute('stroke','#ffb65c');
+  line.setAttribute('d',`M112 ${90+melt*20}Q170 ${110+melt*20} 228 ${90+melt*20}`);glow.setAttribute('opacity',String(.25+.65*p));
+ }
+ document.querySelectorAll('[data-t]').forEach(b=>b.classList.toggle('active',Number(b.dataset.t)===t));
+}
+slider.addEventListener('input',()=>update(Number(slider.value)));
+document.querySelectorAll('[data-t]').forEach(b=>b.addEventListener('click',()=>{slider.value=b.dataset.t;update(Number(b.dataset.t))}));
+document.getElementById('reset').addEventListener('click',()=>{slider.value=20;update(20)});
+update(20);
+</script>
+</body>
+</html>
